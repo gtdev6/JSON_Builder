@@ -1,0 +1,33 @@
+package EvoConditions;
+
+public enum EvoConditionTypes {
+
+    biome,
+    blocksWalkedOutsideBall,
+    chance,
+    critical,
+    evoConditionType,
+    evolutionRock,
+    evolutionScroll,
+    friendship,
+    gender,
+    healthAbsence,
+    heldItem,
+    highAltitude,
+    level,
+    moonPhase,
+    move,
+    moveType,
+    moveUses,
+    nature,
+    nugget,
+    party,
+    potionEffect,
+    recoil,
+    shiny,
+    statRatio,
+    status,
+    time,
+    weather,
+    withinStructure,
+}

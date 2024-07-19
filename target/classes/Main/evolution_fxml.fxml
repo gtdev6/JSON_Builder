@@ -1,0 +1,803 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.geometry.Rectangle2D?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="733.0" prefWidth="1122.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Main.evolutionStage">
+   <children>
+      <TabPane prefHeight="733.0" prefWidth="1122.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab fx:id="evolution_tab" style="-fx-font-size: 16;" text="Evolution">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-font-size: 16;">
+                     <children>
+                        <Label alignment="CENTER" layoutX="484.0" layoutY="14.0" prefHeight="36.0" prefWidth="185.0" text="Evolution" textFill="#1f8fe8" underline="true">
+                           <font>
+                              <Font name="System Bold" size="24.0" />
+                           </font>
+                        </Label>
+                        <VBox fillWidth="false" layoutX="47.0" layoutY="76.0" prefHeight="607.0" prefWidth="333.0" scaleShape="false" spacing="15.0">
+                           <children>
+                              <TextField fx:id="level_evolution_textfield" prefHeight="37.0" prefWidth="204.0" promptText="Enter Level">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </TextField>
+                              <ComboBox fx:id="to_evolution_combobox" editable="true" prefHeight="37.0" prefWidth="204.0" promptText="Enter To" style="-fx-font-size: 16;" />
+                              <TextField fx:id="evoType_evolution_textfield" prefHeight="37.0" prefWidth="204.0" promptText="Enter evoType">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </TextField>
+                              <ComboBox fx:id="evolution_item_combobox" editable="true" prefHeight="37.0" prefWidth="204.0" promptText="Enter Item" style="-fx-font-size: 16;" />
+                              <HBox alignment="CENTER_LEFT" prefHeight="37.0" prefWidth="309.0" spacing="10.0">
+                                 <children>
+                                    <ComboBox fx:id="evolution_move_combobox" editable="true" prefHeight="37.0" prefWidth="204.0" promptText="Enter Move" style="-fx-font-size: 16;" />
+                                    <Button fx:id="evolution_add_move_btn" alignment="CENTER" contentDisplay="GRAPHIC_ONLY" mnemonicParsing="false" prefHeight="37.0" prefWidth="20.0">
+                                       <graphic>
+                                          <ImageView fitHeight="25.0" fitWidth="21.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@Icons/addWhite.png" />
+                                             </image>
+                                             <viewport>
+                                                <Rectangle2D height="50.0" width="50.0" />
+                                             </viewport>
+                                          </ImageView>
+                                       </graphic>
+                                    </Button>
+                                    <Button fx:id="evolution_remove_move_btn" contentDisplay="GRAPHIC_ONLY" mnemonicParsing="false" prefHeight="37.0" prefWidth="32.0">
+                                       <graphic>
+                                          <ImageView fitHeight="25.0" fitWidth="21.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@Icons/removeIcon.png" />
+                                             </image>
+                                             <viewport>
+                                                <Rectangle2D height="35.0" width="35.0" />
+                                             </viewport>
+                                          </ImageView>
+                                       </graphic>
+                                    </Button>
+                                 </children>
+                              </HBox>
+                              <ListView fx:id="evolution_move_list" prefHeight="320.0" prefWidth="306.0" style="-fx-font-size: 16;" />
+                           </children>
+                           <padding>
+                              <Insets left="10.0" right="10.0" top="10.0" />
+                           </padding>
+                        </VBox>
+                        <ListView fx:id="condition_list" layoutX="411.0" layoutY="76.0" prefHeight="415.0" prefWidth="663.0" style="-fx-font-size: 16;" />
+                        <Button fx:id="save_evolution_btn" layoutX="925.0" layoutY="638.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="156.0" style="-fx-font-family: Nunito; -fx-background-color: #1f8fe8; -fx-font-weight: 900; -fx-border-radius: 5;" text="Save Evolution" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="remove_condition_btn" layoutX="760.0" layoutY="518.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="135.0" style="-fx-background-color: #FF9D00; -fx-font-weight: 900;" text="Remove" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="add_condition_btn" layoutX="595.0" layoutY="518.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="135.0" style="-fx-font-family: Nunito; -fx-background-color: #1f8fe8; -fx-font-weight: 900; -fx-border-radius: 5;" text="Add Condition" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab fx:id="condition_tab" style="-fx-font-size: 16;" text="Condition">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Label alignment="CENTER" layoutX="506.0" layoutY="8.0" prefHeight="31.0" prefWidth="98.0" text="Condition" textAlignment="CENTER" textFill="#1f8fe8" underline="true">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        <Button fx:id="save_condition_btn" layoutX="940.0" layoutY="650.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="156.0" style="-fx-font-family: Nunito; -fx-background-color: #1f8fe8; -fx-font-weight: 900; -fx-border-radius: 5;" text="Save Condition" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                        </Button>
+                        <ComboBox fx:id="condition_type_combobox" layoutX="447.0" layoutY="50.0" prefHeight="37.0" prefWidth="231.0" promptText="Select Condition Type" style="-fx-font-size: 16;" />
+                        <VBox fx:id="battleCritical_VBox" alignment="TOP_CENTER" layoutX="357.0" layoutY="151.0" prefHeight="447.0" prefWidth="392.0" spacing="20.0" visible="false">
+                           <children>
+                              <TextField fx:id="critical_battleCritical_TF" prefHeight="40.0" promptText="Enter Critical">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </TextField>
+                              <TextField fx:id="evoConditionType_TF" editable="false" prefHeight="40.0" text="battleCritical">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </TextField>
+                           </children>
+                           <padding>
+                              <Insets left="10.0" right="10.0" top="20.0" />
+                           </padding>
+                        </VBox>
+                        <VBox fx:id="biomeCondition_VBox" alignment="TOP_CENTER" layoutX="357.0" layoutY="151.0" prefHeight="458.0" prefWidth="392.0" spacing="20.0" visible="false">
+                           <padding>
+                              <Insets left="10.0" right="10.0" top="20.0" />
+                           </padding>
+                           <children>
+                              <HBox alignment="CENTER_LEFT" prefHeight="37.0" prefWidth="309.0" spacing="10.0">
+                                 <children>
+                                    <ComboBox fx:id="biome_combobox" editable="true" prefHeight="37.0" prefWidth="265.0" promptText="Enter biome" style="-fx-font-size: 16;" />
+                                    <Button fx:id="add_biome_btn" alignment="CENTER" contentDisplay="GRAPHIC_ONLY" mnemonicParsing="false" prefHeight="37.0" prefWidth="45.0">
+                                       <graphic>
+                                          <ImageView fitHeight="35.0" fitWidth="29.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@Icons/addWhite.png" />
+                                             </image>
+                                             <viewport>
+                                                <Rectangle2D height="50.0" width="50.0" />
+                                             </viewport>
+                                          </ImageView>
+                                       </graphic>
+                                    </Button>
+                                    <Button fx:id="remove_biome_btn" contentDisplay="GRAPHIC_ONLY" mnemonicParsing="false" prefHeight="37.0" prefWidth="23.0">
+                                       <graphic>
+                                          <ImageView fitHeight="35.0" fitWidth="29.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@Icons/removeIcon.png" />
+                                             </image>
+                                             <viewport>
+                                                <Rectangle2D height="35.0" width="35.0" />
+                                             </viewport>
+                                          </ImageView>
+                                       </graphic>
+                                    </Button>
+                                 </children>
+                              </HBox>
+                              <ListView fx:id="biome_list" prefHeight="369.0" prefWidth="372.0" style="-fx-font-size: 16;" />
+                           </children>
+                        </VBox>
+                        <VBox fx:id="blocksWalkedOutsideBallCondition_VBox" alignment="TOP_CENTER" layoutX="357.0" layoutY="151.0" prefHeight="458.0" prefWidth="392.0" spacing="20.0" visible="false">
+                           <padding>
+                              <Insets left="10.0" right="10.0" top="20.0" />
+                           </padding>
+                           <children>
+                              <TextField fx:id="blocksToWalk_blocksWalkedOutside_TF" prefHeight="40.0" promptText="Enter blocksToWalk">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </TextField>
+                              <TextField fx:id="evoConditionType_blocksWalkedOutside_TF" editable="false" prefHeight="40.0" text="blocksWalkedOutsideBall">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </TextField>
+                           </children>
+                        </VBox>
+                        <VBox fx:id="chanceCondition_VBox" alignment="TOP_CENTER" layoutX="357.0" layoutY="151.0" prefHeight="458.0" prefWidth="392.0" spacing="20.0" visible="false">
+                           <padding>
+                              <Insets left="10.0" right="10.0" top="20.0" />
+                           </padding>
+                           <children>
+                              <TextField fx:id="chance_chanceCondition_TF" prefHeight="40.0" promptText="Enter chance">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </TextField>
+                              <TextField fx:id="evoConditionType_chanceCondition_TF" editable="false" prefHeight="40.0" text="chance">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </TextField>
+                           </children>
+                        </VBox>
+                        <VBox fx:id="evoConditionType_VBox" alignment="TOP_CENTER" layoutX="357.0" layoutY="151.0" prefHeight="458.0" prefWidth="392.0" spacing="20.0" visible="false">
+                           <padding>
+                              <Insets left="10.0" right="10.0" top="20.0" />
+                           </padding>
+                           <children>
+                              <TextField fx:id="condition_evoCondition_TF" prefHeight="40.0" promptText="Enter EvoCondition">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </TextField>
+                           </children>
+                        </VBox>
+                        <VBox fx:id="evoRockCondition_VBox" alignment="TOP_CENTER" layoutX="357.0" layoutY="151.0" prefHeight="458.0" prefWidth="392.0" spacing="20.0" visible="false">
+                           <padding>
+                              <Insets left="10.0" right="10.0" top="20.0" />
+                           </padding>
+                           <children>
+                              <ChoiceBox fx:id="evolutionRock_evoRockCondition_ChoiceBox" prefHeight="40.0" prefWidth="365.0" />
+                              <TextField fx:id="maxRangeSquared_evoRockCondition_TF" prefHeight="40.0" promptText="Enter maxRangeSquared">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </TextField>
+                              <TextField fx:id="evoConditionType_evoRockCondition_TF" editable="false" prefHeight="40.0" text="evoRock">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </TextField>
+                           </children>
+                        </VBox>
+                        <VBox fx:id="evoScrollCondition_VBox" alignment="TOP_CENTER" layoutX="357.0" layoutY="151.0" prefHeight="458.0" prefWidth="392.0" spacing="20.0" visible="false">
+                           <padding>
+                              <Insets left="10.0" right="10.0" top="20.0" />
+                           </padding>
+                           <children>
+                              <ChoiceBox fx:id="evolutionScroll_evoScrollCondition_ChoiceBox" prefHeight="40.0" prefWidth="365.0" />
+                              <TextField fx:id="maxRangeSquared_evoScrollCondition_TF" prefHeight="40.0" promptText="Enter maxRangeSquared">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </TextField>
+                              <TextField fx:id="evoConditionType_evoScrollCondition_TF" editable="false" prefHeight="40.0" text="evoScroll">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </TextField>
+                           </children>
+                        </VBox>
+                        <VBox fx:id="friendship_VBox" alignment="TOP_CENTER" layoutX="357.0" layoutY="151.0" prefHeight="447.0" prefWidth="392.0" spacing="20.0" visible="false">
+                           <children>
+                              <TextField fx:id="friendship_friendshipCondition_TF" prefHeight="40.0" promptText="Enter Friendship">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </TextField>
+                              <TextField fx:id="evoConditionType_friendshipCondition_TF" editable="false" prefHeight="40.0" text="friendship">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </TextField>
+                           </children>
+                           <padding>
+                              <Insets left="10.0" right="10.0" top="20.0" />
+                           </padding>
+                        </VBox>
+                        <VBox fx:id="genderCondition_VBox" alignment="TOP_CENTER" layoutX="357.0" layoutY="151.0" prefHeight="458.0" prefWidth="392.0" spacing="20.0" visible="false">
+                           <padding>
+                              <Insets left="10.0" right="10.0" top="20.0" />
+                           </padding>
+                           <children>
+                              <HBox alignment="CENTER_LEFT" prefHeight="37.0" prefWidth="309.0" spacing="10.0">
+                                 <children>
+                                    <ComboBox fx:id="gender_combobox" editable="true" prefHeight="37.0" prefWidth="265.0" promptText="Enter Gender" style="-fx-font-size: 16;" />
+                                    <Button fx:id="add_gender_genderCondition_btn" alignment="CENTER" contentDisplay="GRAPHIC_ONLY" mnemonicParsing="false" prefHeight="37.0" prefWidth="45.0">
+                                       <graphic>
+                                          <ImageView fitHeight="35.0" fitWidth="29.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@Icons/addWhite.png" />
+                                             </image>
+                                             <viewport>
+                                                <Rectangle2D height="50.0" width="50.0" />
+                                             </viewport>
+                                          </ImageView>
+                                       </graphic>
+                                    </Button>
+                                    <Button fx:id="remove_gender_genderCondition_btn" contentDisplay="GRAPHIC_ONLY" mnemonicParsing="false" prefHeight="37.0" prefWidth="23.0">
+                                       <graphic>
+                                          <ImageView fitHeight="35.0" fitWidth="29.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@Icons/removeIcon.png" />
+                                             </image>
+                                             <viewport>
+                                                <Rectangle2D height="35.0" width="35.0" />
+                                             </viewport>
+                                          </ImageView>
+                                       </graphic>
+                                    </Button>
+                                 </children>
+                              </HBox>
+                              <ListView fx:id="gender_list" prefHeight="369.0" prefWidth="372.0" />
+                           </children>
+                        </VBox>
+                        <VBox fx:id="healthAbsenceCondition_VBox" alignment="TOP_CENTER" layoutX="357.0" layoutY="151.0" prefHeight="458.0" prefWidth="392.0" spacing="20.0" visible="false">
+                           <padding>
+                              <Insets left="10.0" right="10.0" top="20.0" />
+                           </padding>
+                           <children>
+                              <TextField fx:id="health_healthAbsenceCondition_TF" prefHeight="40.0" promptText="Enter Health">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </TextField>
+                              <TextField fx:id="evoConditionType_healthAbsence_Condition_TF" editable="false" prefHeight="40.0" text="healthAbsence">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </TextField>
+                           </children>
+                        </VBox>
+                        <VBox fx:id="heldItemCondition_VBox" alignment="TOP_CENTER" layoutX="357.0" layoutY="151.0" prefHeight="458.0" prefWidth="392.0" spacing="20.0" visible="false">
+                           <padding>
+                              <Insets left="10.0" right="10.0" top="20.0" />
+                           </padding>
+                           <children>
+                              <ComboBox fx:id="itemID_heldItemCondition_comboBox" editable="true" prefHeight="40.0" prefWidth="370.0" promptText="Enter itemID" style="-fx-font-size: 16;" />
+                              <TextField fx:id="evoConditionType_heldItemCondition_TF" editable="false" prefHeight="40.0" text="heldItem">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </TextField>
+                           </children>
+                        </VBox>
+                        <VBox fx:id="levelCondition_VBox" alignment="TOP_CENTER" layoutX="357.0" layoutY="151.0" prefHeight="458.0" prefWidth="392.0" spacing="20.0" visible="false">
+                           <padding>
+                              <Insets left="10.0" right="10.0" top="20.0" />
+                           </padding>
+                           <children>
+                              <TextField fx:id="level_levelCondition_TF" prefHeight="40.0" promptText="Enter level">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </TextField>
+                              <TextField fx:id="evoConditionType_levelCondition_TF" editable="false" prefHeight="40.0" text="level">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </TextField>
+                           </children>
+                        </VBox>
+                        <VBox fx:id="highAltitudeCondition_VBox" alignment="TOP_CENTER" layoutX="357.0" layoutY="151.0" prefHeight="458.0" prefWidth="392.0" spacing="20.0" visible="false">
+                           <padding>
+                              <Insets left="10.0" right="10.0" top="20.0" />
+                           </padding>
+                           <children>
+                              <TextField fx:id="minAltitude_highAltitudeCondition_TF" prefHeight="40.0" promptText="Enter minAltitude">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </TextField>
+                              <TextField fx:id="evoConditionType_highAltitudeCondition_TF" editable="false" prefHeight="40.0" text="highAltitude">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </TextField>
+                           </children>
+                        </VBox>
+                        <VBox fx:id="moonPhaseCondition_VBox" alignment="TOP_CENTER" layoutX="357.0" layoutY="151.0" prefHeight="458.0" prefWidth="392.0" spacing="20.0" visible="false">
+                           <padding>
+                              <Insets left="10.0" right="10.0" top="20.0" />
+                           </padding>
+                           <children>
+                              <TextField fx:id="moonPhase_moonPhaseCondition_TF" prefHeight="40.0" promptText="Enter moonPhase">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </TextField>
+                              <TextField fx:id="evoConditionType_moonPhaseCondition_TF" editable="false" prefHeight="40.0" text="moonPhase">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </TextField>
+                           </children>
+                        </VBox>
+                        <VBox fx:id="moveCondition_VBox" alignment="TOP_CENTER" layoutX="357.0" layoutY="151.0" prefHeight="458.0" prefWidth="392.0" spacing="20.0" visible="false">
+                           <padding>
+                              <Insets left="10.0" right="10.0" top="20.0" />
+                           </padding>
+                           <children>
+                              <TextField fx:id="attackName_moveCondition_TF" prefHeight="40.0" promptText="Enter attackName">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </TextField>
+                              <TextField fx:id="evoConditionType_moveCondition_TF" editable="false" prefHeight="40.0" text="move">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </TextField>
+                           </children>
+                        </VBox>
+                        <VBox fx:id="moveUsesCondition_VBox" alignment="TOP_CENTER" layoutX="357.0" layoutY="151.0" prefHeight="458.0" prefWidth="392.0" spacing="20.0" visible="false">
+                           <padding>
+                              <Insets left="10.0" right="10.0" top="20.0" />
+                           </padding>
+                           <children>
+                              <TextField fx:id="uses_moveUsesCondition_TF" prefHeight="40.0" promptText="Enter Uses">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </TextField>
+                              <TextField fx:id="evoConditionType_moveUsesCondition_TF" editable="false" prefHeight="40.0" text="moveUses">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </TextField>
+                           </children>
+                        </VBox>
+                        <VBox fx:id="moveTypeCondition_VBox" alignment="TOP_CENTER" layoutX="357.0" layoutY="151.0" prefHeight="458.0" prefWidth="392.0" spacing="20.0" visible="false">
+                           <padding>
+                              <Insets left="10.0" right="10.0" top="20.0" />
+                           </padding>
+                           <children>
+                              <TextField fx:id="type_moveTypeCondition_TF" prefHeight="40.0" promptText="Enter type">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </TextField>
+                              <TextField fx:id="evoConditionType_moveTypeCondition_TF" editable="false" prefHeight="40.0" text="moveType">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </TextField>
+                           </children>
+                        </VBox>
+                        <VBox fx:id="natureCondition_VBox" alignment="TOP_CENTER" layoutX="357.0" layoutY="151.0" prefHeight="458.0" prefWidth="392.0" spacing="20.0" visible="false">
+                           <padding>
+                              <Insets left="10.0" right="10.0" top="20.0" />
+                           </padding>
+                           <children>
+                              <HBox alignment="CENTER_LEFT" prefHeight="37.0" prefWidth="309.0" spacing="10.0">
+                                 <children>
+                                    <ComboBox fx:id="nature_combobox" editable="true" prefHeight="37.0" prefWidth="265.0" promptText="Enter Nature" style="-fx-font-size: 16;" />
+                                    <Button fx:id="add_nature_btn" alignment="CENTER" contentDisplay="GRAPHIC_ONLY" mnemonicParsing="false" prefHeight="37.0" prefWidth="45.0">
+                                       <graphic>
+                                          <ImageView fitHeight="35.0" fitWidth="29.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@Icons/addWhite.png" />
+                                             </image>
+                                             <viewport>
+                                                <Rectangle2D height="50.0" width="50.0" />
+                                             </viewport>
+                                          </ImageView>
+                                       </graphic>
+                                    </Button>
+                                    <Button fx:id="remove_nature_btn" contentDisplay="GRAPHIC_ONLY" mnemonicParsing="false" prefHeight="37.0" prefWidth="23.0">
+                                       <graphic>
+                                          <ImageView fitHeight="35.0" fitWidth="29.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@Icons/removeIcon.png" />
+                                             </image>
+                                             <viewport>
+                                                <Rectangle2D height="35.0" width="35.0" />
+                                             </viewport>
+                                          </ImageView>
+                                       </graphic>
+                                    </Button>
+                                 </children>
+                              </HBox>
+                              <ListView fx:id="nature_list" prefHeight="369.0" prefWidth="372.0" />
+                           </children>
+                        </VBox>
+                        <VBox fx:id="nuggetCondition_VBox" alignment="TOP_CENTER" layoutX="357.0" layoutY="151.0" prefHeight="458.0" prefWidth="392.0" spacing="20.0" visible="false">
+                           <padding>
+                              <Insets left="10.0" right="10.0" top="20.0" />
+                           </padding>
+                           <children>
+                              <TextField fx:id="nuggets_nuggetCondition_TF" prefHeight="40.0" promptText="Enter Nuggets" style="-fx-font-size: 16;" />
+                              <TextField fx:id="evoCondition_nuggetCondition_TF" editable="false" prefHeight="40.0" style="-fx-font-size: 16;" text="nugget" />
+                           </children>
+                        </VBox>
+                        <HBox fx:id="paryCondition_HBox" alignment="CENTER" layoutX="32.0" layoutY="151.0" prefHeight="482.0" prefWidth="1062.0" spacing="5.0" style="-fx-border-width: 1; -fx-border-color: #dddddd;" visible="false">
+                           <children>
+                              <VBox fx:id="formPartyCondition_VBox" alignment="TOP_CENTER" prefHeight="445.0" prefWidth="254.0" spacing="10.0">
+                                 <padding>
+                                    <Insets left="10.0" right="10.0" top="20.0" />
+                                 </padding>
+                                 <children>
+                                    <ComboBox fx:id="form_partyCondition_combobox" editable="true" prefHeight="37.0" prefWidth="234.0" promptText="Enter Form" style="-fx-font-size: 16;" />
+                                    <HBox alignment="CENTER_RIGHT" prefHeight="37.0" prefWidth="309.0" spacing="20.0">
+                                       <children>
+                                          <Button fx:id="add_form_partyCondition_btn" alignment="CENTER" contentDisplay="GRAPHIC_ONLY" mnemonicParsing="false" prefHeight="37.0" prefWidth="45.0">
+                                             <graphic>
+                                                <ImageView fitHeight="35.0" fitWidth="29.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@Icons/addWhite.png" />
+                                                   </image>
+                                                   <viewport>
+                                                      <Rectangle2D height="50.0" width="50.0" />
+                                                   </viewport>
+                                                </ImageView>
+                                             </graphic>
+                                          </Button>
+                                          <Button fx:id="remove_form_partyCondition_btn" alignment="CENTER" contentDisplay="GRAPHIC_ONLY" mnemonicParsing="false" prefHeight="37.0" prefWidth="23.0">
+                                             <graphic>
+                                                <ImageView fitHeight="35.0" fitWidth="29.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@Icons/removeIcon.png" />
+                                                   </image>
+                                                   <viewport>
+                                                      <Rectangle2D height="35.0" width="35.0" />
+                                                   </viewport>
+                                                </ImageView>
+                                             </graphic>
+                                          </Button>
+                                       </children>
+                                    </HBox>
+                                    <ListView fx:id="form_partyCondition_list" prefHeight="349.0" prefWidth="228.0" style="-fx-font-size: 16;" />
+                                 </children>
+                              </VBox>
+                              <Separator orientation="VERTICAL" prefHeight="200.0" />
+                              <VBox fx:id="palette_partyCondition_VBox" alignment="TOP_CENTER" prefHeight="445.0" prefWidth="254.0" spacing="10.0">
+                                 <padding>
+                                    <Insets left="10.0" right="10.0" top="20.0" />
+                                 </padding>
+                                 <children>
+                                    <ComboBox fx:id="palette_partyCondition_combobox" editable="true" prefHeight="37.0" prefWidth="234.0" promptText="Enter Palette" style="-fx-font-size: 16;" />
+                                    <HBox alignment="CENTER_RIGHT" prefHeight="37.0" prefWidth="309.0" spacing="20.0">
+                                       <children>
+                                          <Button fx:id="add_palette_partyCondition_btn" alignment="CENTER" contentDisplay="GRAPHIC_ONLY" mnemonicParsing="false" prefHeight="37.0" prefWidth="45.0">
+                                             <graphic>
+                                                <ImageView fitHeight="35.0" fitWidth="29.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@Icons/addWhite.png" />
+                                                   </image>
+                                                   <viewport>
+                                                      <Rectangle2D height="50.0" width="50.0" />
+                                                   </viewport>
+                                                </ImageView>
+                                             </graphic>
+                                          </Button>
+                                          <Button fx:id="remove_palette_partyCondition_btn" alignment="CENTER" contentDisplay="GRAPHIC_ONLY" mnemonicParsing="false" prefHeight="37.0" prefWidth="23.0">
+                                             <graphic>
+                                                <ImageView fitHeight="35.0" fitWidth="29.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@Icons/removeIcon.png" />
+                                                   </image>
+                                                   <viewport>
+                                                      <Rectangle2D height="35.0" width="35.0" />
+                                                   </viewport>
+                                                </ImageView>
+                                             </graphic>
+                                          </Button>
+                                       </children>
+                                    </HBox>
+                                    <ListView fx:id="palette_partyCondition_list" prefHeight="349.0" prefWidth="228.0" style="-fx-font-size: 16;" />
+                                 </children>
+                              </VBox>
+                              <Separator orientation="VERTICAL" prefHeight="200.0" />
+                              <VBox fx:id="pokemonCondition_VBox" alignment="TOP_CENTER" prefHeight="445.0" prefWidth="254.0" spacing="10.0">
+                                 <padding>
+                                    <Insets left="10.0" right="10.0" top="20.0" />
+                                 </padding>
+                                 <children>
+                                    <ComboBox fx:id="pokemon_partyCondition_combobox" editable="true" prefHeight="37.0" prefWidth="234.0" promptText="Enter Pokemon" style="-fx-font-size: 16;" />
+                                    <HBox alignment="CENTER_RIGHT" prefHeight="37.0" prefWidth="309.0" spacing="20.0">
+                                       <children>
+                                          <Button fx:id="add_pokemon_partyCondition_btn" alignment="CENTER" contentDisplay="GRAPHIC_ONLY" mnemonicParsing="false" prefHeight="37.0" prefWidth="45.0">
+                                             <graphic>
+                                                <ImageView fitHeight="35.0" fitWidth="29.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@Icons/addWhite.png" />
+                                                   </image>
+                                                   <viewport>
+                                                      <Rectangle2D height="50.0" width="50.0" />
+                                                   </viewport>
+                                                </ImageView>
+                                             </graphic>
+                                          </Button>
+                                          <Button fx:id="remove_pokemon_partyCondition_btn" alignment="CENTER" contentDisplay="GRAPHIC_ONLY" mnemonicParsing="false" prefHeight="37.0" prefWidth="23.0">
+                                             <graphic>
+                                                <ImageView fitHeight="35.0" fitWidth="29.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@Icons/removeIcon.png" />
+                                                   </image>
+                                                   <viewport>
+                                                      <Rectangle2D height="35.0" width="35.0" />
+                                                   </viewport>
+                                                </ImageView>
+                                             </graphic>
+                                          </Button>
+                                       </children>
+                                    </HBox>
+                                    <ListView fx:id="pokemon_partyCondition_list" prefHeight="349.0" prefWidth="228.0" style="-fx-font-size: 16;" />
+                                 </children>
+                              </VBox>
+                              <Separator orientation="VERTICAL" prefHeight="200.0" />
+                              <VBox fx:id="typesPartyCondition_VBox" alignment="TOP_CENTER" prefHeight="445.0" prefWidth="254.0" spacing="10.0">
+                                 <padding>
+                                    <Insets left="10.0" right="10.0" top="20.0" />
+                                 </padding>
+                                 <children>
+                                    <ComboBox fx:id="type_partyCondition_combobox" editable="true" prefHeight="37.0" prefWidth="234.0" promptText="Enter Type" style="-fx-font-size: 16;" />
+                                    <HBox alignment="CENTER_RIGHT" prefHeight="37.0" prefWidth="309.0" spacing="20.0">
+                                       <children>
+                                          <Button fx:id="add_type_partyCondition_btn" alignment="CENTER" contentDisplay="GRAPHIC_ONLY" mnemonicParsing="false" prefHeight="37.0" prefWidth="45.0">
+                                             <graphic>
+                                                <ImageView fitHeight="35.0" fitWidth="29.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@Icons/addWhite.png" />
+                                                   </image>
+                                                   <viewport>
+                                                      <Rectangle2D height="50.0" width="50.0" />
+                                                   </viewport>
+                                                </ImageView>
+                                             </graphic>
+                                          </Button>
+                                          <Button fx:id="remove_type_partyCondition_btn" alignment="CENTER" contentDisplay="GRAPHIC_ONLY" mnemonicParsing="false" prefHeight="37.0" prefWidth="23.0">
+                                             <graphic>
+                                                <ImageView fitHeight="35.0" fitWidth="29.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@Icons/removeIcon.png" />
+                                                   </image>
+                                                   <viewport>
+                                                      <Rectangle2D height="35.0" width="35.0" />
+                                                   </viewport>
+                                                </ImageView>
+                                             </graphic>
+                                          </Button>
+                                       </children>
+                                    </HBox>
+                                    <ListView fx:id="type_partyCondition_list" prefHeight="349.0" prefWidth="228.0" style="-fx-font-size: 16;" />
+                                 </children>
+                              </VBox>
+                           </children>
+                        </HBox>
+                        <VBox fx:id="potionEffectCondition_VBox" alignment="TOP_CENTER" layoutX="357.0" layoutY="151.0" prefHeight="458.0" prefWidth="392.0" spacing="20.0" visible="false">
+                           <padding>
+                              <Insets left="10.0" right="10.0" top="20.0" />
+                           </padding>
+                           <children>
+                              <HBox alignment="CENTER_LEFT" prefHeight="37.0" prefWidth="309.0" spacing="10.0">
+                                 <children>
+                                    <TextField fx:id="potionEffect_TF" prefHeight="37.0" prefWidth="272.0" promptText="Enter Potion" style="-fx-font-size: 16;" />
+                                    <Button fx:id="add_potionEffectCondition_btn" alignment="CENTER" contentDisplay="GRAPHIC_ONLY" mnemonicParsing="false" prefHeight="37.0" prefWidth="45.0">
+                                       <graphic>
+                                          <ImageView fitHeight="35.0" fitWidth="29.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@Icons/addWhite.png" />
+                                             </image>
+                                             <viewport>
+                                                <Rectangle2D height="50.0" width="50.0" />
+                                             </viewport>
+                                          </ImageView>
+                                       </graphic>
+                                    </Button>
+                                    <Button fx:id="remove_potionEffectCondition_btn" contentDisplay="GRAPHIC_ONLY" mnemonicParsing="false" prefHeight="37.0" prefWidth="23.0">
+                                       <graphic>
+                                          <ImageView fitHeight="35.0" fitWidth="29.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@Icons/removeIcon.png" />
+                                             </image>
+                                             <viewport>
+                                                <Rectangle2D height="35.0" width="35.0" />
+                                             </viewport>
+                                          </ImageView>
+                                       </graphic>
+                                    </Button>
+                                 </children>
+                              </HBox>
+                              <ListView fx:id="potionEffect_list" prefHeight="369.0" prefWidth="372.0" />
+                           </children>
+                        </VBox>
+                        <VBox fx:id="recoilCondition_VBox" alignment="TOP_CENTER" layoutX="357.0" layoutY="151.0" prefHeight="458.0" prefWidth="392.0" spacing="20.0" visible="false">
+                           <padding>
+                              <Insets left="10.0" right="10.0" top="20.0" />
+                           </padding>
+                           <children>
+                              <TextField fx:id="recoil_recoilCondition_TF" prefHeight="40.0" promptText="Enter Recoil">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </TextField>
+                              <TextField fx:id="evoConditionType_recoilCondition_TF" editable="false" prefHeight="40.0" text="recoil">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </TextField>
+                           </children>
+                        </VBox>
+                        <VBox fx:id="shinyCondition_VBox" alignment="TOP_CENTER" layoutX="357.0" layoutY="151.0" prefHeight="458.0" prefWidth="392.0" spacing="20.0" visible="false">
+                           <padding>
+                              <Insets left="10.0" right="10.0" top="20.0" />
+                           </padding>
+                           <children>
+                              <CheckBox fx:id="shinyCondition_checkbox" mnemonicParsing="false" prefHeight="40.0" prefWidth="367.0" text="Shiny">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </CheckBox>
+                              <TextField fx:id="evoConditionType_shinyCondition_TF" editable="false" prefHeight="40.0" text="shiny">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </TextField>
+                           </children>
+                        </VBox>
+                        <VBox fx:id="statRatioCondition_VBox" alignment="TOP_CENTER" layoutX="357.0" layoutY="151.0" prefHeight="458.0" prefWidth="392.0" spacing="20.0" visible="false">
+                           <padding>
+                              <Insets left="10.0" right="10.0" top="20.0" />
+                           </padding>
+                           <children>
+                              <TextField fx:id="ratio_statRatioCondition_TF" prefHeight="40.0" promptText="Enter Ratio">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </TextField>
+                              <TextField fx:id="stat1_statRatioCondition_TF" prefHeight="40.0" promptText="Enter Stat1">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </TextField>
+                              <TextField fx:id="stat2_statRatioCondition_TF" prefHeight="40.0" promptText="Enter Stat2">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </TextField>
+                              <TextField fx:id="evoConditionType_statRatioCondition_TF" editable="false" prefHeight="40.0" text="statRatio">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </TextField>
+                           </children>
+                        </VBox>
+                        <VBox fx:id="statusCondition_VBox" alignment="TOP_CENTER" layoutX="357.0" layoutY="151.0" prefHeight="458.0" prefWidth="392.0" spacing="20.0" visible="false">
+                           <padding>
+                              <Insets left="10.0" right="10.0" top="20.0" />
+                           </padding>
+                           <children>
+                              <ComboBox fx:id="status_statusCondition_combobox" editable="true" prefHeight="40.0" prefWidth="368.0" promptText="Enter Status" style="-fx-font-size: 16;" />
+                              <TextField fx:id="evoConditionType_statusCondition_TF" editable="false" prefHeight="40.0" text="statusRatio">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </TextField>
+                           </children>
+                        </VBox>
+                        <VBox fx:id="timeCondition_VBox" alignment="TOP_CENTER" layoutX="357.0" layoutY="151.0" prefHeight="458.0" prefWidth="392.0" spacing="20.0" visible="false">
+                           <padding>
+                              <Insets left="10.0" right="10.0" top="20.0" />
+                           </padding>
+                           <children>
+                              <ComboBox fx:id="timeCondition_combobox" editable="true" prefHeight="40.0" prefWidth="368.0" promptText="Enter Time" style="-fx-font-size: 16;" />
+                              <TextField fx:id="evoConditionType_timeCondition_TF" editable="false" prefHeight="40.0" text="time">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </TextField>
+                           </children>
+                        </VBox>
+                        <VBox fx:id="weatherCondition_VBox" alignment="TOP_CENTER" layoutX="357.0" layoutY="151.0" prefHeight="458.0" prefWidth="392.0" spacing="20.0" visible="false">
+                           <padding>
+                              <Insets left="10.0" right="10.0" top="20.0" />
+                           </padding>
+                           <children>
+                              <ComboBox fx:id="weatherType_weatherCondition_combobox" editable="true" prefHeight="40.0" prefWidth="368.0" promptText="Enter Weather" style="-fx-font-size: 16;" />
+                              <TextField fx:id="evoConditionType_weatherCondition_TF" editable="false" prefHeight="40.0" text="weather">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </TextField>
+                           </children>
+                        </VBox>
+                        <VBox fx:id="withinStructureCondition_VBox" alignment="TOP_CENTER" layoutX="357.0" layoutY="151.0" prefHeight="458.0" prefWidth="392.0" spacing="20.0" visible="false">
+                           <padding>
+                              <Insets left="10.0" right="10.0" top="20.0" />
+                           </padding>
+                           <children>
+                              <TextField fx:id="structure_withinStructureCondition_TF" prefHeight="40.0" promptText="Enter Structure">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </TextField>
+                              <TextField fx:id="evoConditionType_withinStructureCondition_TF" editable="false" prefHeight="40.0" text="withinStructure">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </TextField>
+                           </children>
+                        </VBox>
+                     </children></AnchorPane>
+            </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</Pane>

@@ -1,0 +1,1482 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.geometry.Rectangle2D?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.ColorAdjust?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<Pane fx:id="main_frame" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="738.0" prefWidth="1366.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Main.UIController">
+   <children>
+      <TabPane fx:id="tab_pane" prefHeight="738.0" prefWidth="1116.0" tabClosingPolicy="UNAVAILABLE" visible="false">
+        <tabs>
+          <Tab fx:id="title_tab" closable="false" text="Title">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="691.0" prefWidth="1049.0">
+                     <children>
+                        <Label alignment="CENTER_RIGHT" layoutX="288.0" layoutY="205.0" prefHeight="31.0" prefWidth="66.0" text="Name :" textAlignment="CENTER" textFill="#1f8fe8">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="name_textField" layoutX="445.0" layoutY="197.0" prefHeight="31.0" prefWidth="284.0" promptText="Enter Name">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </TextField>
+                        <Label alignment="CENTER_RIGHT" layoutX="288.0" layoutY="273.0" prefHeight="31.0" prefWidth="66.0" text="Dex :" textFill="#1f8fe8">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="dex_textfield" layoutX="445.0" layoutY="265.0" prefHeight="31.0" prefWidth="284.0" promptText="Enter Dex">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </TextField>
+                        <Button fx:id="title_next_btn" layoutX="1000.0" layoutY="641.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="71.0" style=" -fx-background-color: #1f8fe8; -fx-font-weight: 900;" text="Next" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab fx:id="default_form_tab" closable="false" text="defaultForms">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <VBox layoutX="363.0" layoutY="110.0" spacing="20.0">
+                           <children>
+                              <HBox prefHeight="45.0" prefWidth="360.0" spacing="10.0">
+                                 <children>
+                                    <TextField fx:id="defaultforms_textfield" prefHeight="37.0" prefWidth="281.0" promptText="Add into List" />
+                                    <Button fx:id="defaultform_add_btn" alignment="CENTER" contentDisplay="GRAPHIC_ONLY" mnemonicParsing="false" prefHeight="37.0" prefWidth="20.0">
+                                       <graphic>
+                                          <ImageView fitHeight="25.0" fitWidth="21.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@Icons/addWhite.png" />
+                                             </image>
+                                             <viewport>
+                                                <Rectangle2D height="50.0" width="50.0" />
+                                             </viewport>
+                                          </ImageView>
+                                       </graphic>
+                                    </Button>
+                                    <Button fx:id="defaultform_remove_btn" contentDisplay="GRAPHIC_ONLY" mnemonicParsing="false" prefHeight="37.0" prefWidth="32.0">
+                                       <graphic>
+                                          <ImageView fitHeight="25.0" fitWidth="21.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@Icons/removeIcon.png" />
+                                             </image>
+                                             <viewport>
+                                                <Rectangle2D height="35.0" width="35.0" />
+                                             </viewport>
+                                          </ImageView>
+                                       </graphic>
+                                    </Button>
+                                 </children>
+                                 <padding>
+                                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                 </padding>
+                              </HBox>
+                              <ListView fx:id="defaultForms_list" prefHeight="377.0" prefWidth="360.0" style="-fx-font-size: 16; -fx-highlight-fill: #1f8fe8; -fx-highlight-text-fill: #ffffff;">
+                                 <VBox.margin>
+                                    <Insets bottom="10.0" left="5.0" right="5.0" />
+                                 </VBox.margin>
+                              </ListView>
+                           </children>
+                           <padding>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </padding>
+                        </VBox>
+                        <Button fx:id="defaultform_next_btn" layoutX="1000.0" layoutY="641.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="71.0" style=" -fx-background-color: #1f8fe8; -fx-font-weight: 900;" text="Next" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+            <Tab fx:id="forms_preview_tabl" text="Forms Preview">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <HBox layoutX="54.0" layoutY="561.0" spacing="20.0">
+                           <children>
+                              <Label alignment="CENTER_RIGHT" prefHeight="31.0" prefWidth="99.0" text="Generation :" textAlignment="CENTER" textFill="#1f8fe8">
+                                 <font>
+                                    <Font name="System Bold" size="16.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="generation_textfield" prefHeight="30.0" prefWidth="151.0" />
+                           </children>
+                           <padding>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </padding>
+                        </HBox>
+                        <ListView fx:id="forms_list" layoutX="53.0" layoutY="63.0" prefHeight="464.0" prefWidth="877.0" style="-fx-font-size: 16; -fx-highlight-fill: #1f8fe8; -fx-highlight-text-fill: #ffffff;" />
+                        <Button fx:id="finish_Json_btn" layoutX="62.0" layoutY="629.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="114.0" style=" -fx-background-color: #1f8fe8; -fx-font-weight: 900;" text="Finish JSON" textFill="WHITE">
+
+                                    </Button>
+                        <Button fx:id="add_form_btn" layoutX="963.0" layoutY="412.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="109.0" style=" -fx-background-color: #1f8fe8; -fx-font-weight: 900;" text="Add Form" textFill="WHITE">
+
+                                    </Button>
+                        <Button fx:id="remove_form_btn" layoutX="963.0" layoutY="478.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="110.0" style="-fx-background-color: #FF9D00; -fx-font-weight: 900;" text="Remove" textFill="WHITE">
+
+                                    </Button>
+                        <Button fx:id="edit_form_btn" layoutX="963.0" layoutY="347.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="109.0" style=" -fx-background-color: #2c5364; -fx-font-weight: 900;" text="Edit" textFill="WHITE" visible="false">
+
+                                    </Button>
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+            <Tab fx:id="forms_tab" closable="false" text="Forms">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <VBox layoutX="266.0" layoutY="123.0">
+                           <children>
+                              <VBox spacing="10.0">
+                                 <children>
+                                    <HBox alignment="CENTER" spacing="40.0">
+                                       <children>
+                                          <Label alignment="CENTER_RIGHT" prefHeight="31.0" prefWidth="184.0" text="Name :" textAlignment="CENTER" textFill="#1f8fe8">
+                                             <font>
+                                                <Font name="System Bold" size="16.0" />
+                                             </font>
+                                          </Label>
+                                          <TextField fx:id="name_forms_textfield" prefHeight="40.0" prefWidth="284.0" promptText="Enter Name">
+                                             <font>
+                                                <Font size="16.0" />
+                                             </font>
+                                          </TextField>
+                                       </children>
+                                    </HBox>
+                                    <HBox alignment="CENTER" spacing="40.0">
+                                       <children>
+                                          <Label alignment="CENTER_RIGHT" prefHeight="31.0" prefWidth="184.0" text="Experience Group :" textAlignment="CENTER" textFill="#1f8fe8">
+                                             <font>
+                                                <Font name="System Bold" size="16.0" />
+                                             </font>
+                                          </Label>
+                                          <TextField fx:id="experience_group_forms_textfield" prefHeight="40.0" prefWidth="284.0" promptText="Enter Experience Group">
+                                             <font>
+                                                <Font size="16.0" />
+                                             </font>
+                                          </TextField>
+                                       </children>
+                                    </HBox>
+                                 </children>
+                                 <padding>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                 </padding>
+                              </VBox>
+                              <VBox alignment="CENTER">
+                                 <children>
+                                    <Label alignment="CENTER" prefHeight="31.0" prefWidth="133.0" text="Dimensions" textAlignment="CENTER" textFill="#1f8fe8" underline="true">
+                                       <font>
+                                          <Font name="System Bold" size="16.0" />
+                                       </font>
+                                       <VBox.margin>
+                                          <Insets top="10.0" />
+                                       </VBox.margin>
+                                    </Label>
+                                    <VBox alignment="CENTER" spacing="10.0">
+                                       <children>
+                                          <HBox alignment="CENTER" spacing="40.0">
+                                             <children>
+                                                <Label alignment="CENTER_RIGHT" prefHeight="31.0" prefWidth="184.0" text="Height :" textAlignment="CENTER" textFill="#1f8fe8">
+                                                   <font>
+                                                      <Font name="System Bold" size="16.0" />
+                                                   </font>
+                                                </Label>
+                                                <TextField fx:id="height_forms_textfield" prefHeight="40.0" prefWidth="284.0" promptText="Enter Height">
+                                                   <font>
+                                                      <Font size="16.0" />
+                                                   </font>
+                                                </TextField>
+                                             </children>
+                                          </HBox>
+                                          <HBox alignment="CENTER" spacing="40.0">
+                                             <children>
+                                                <Label alignment="CENTER_RIGHT" prefHeight="31.0" prefWidth="184.0" text="Width :" textAlignment="CENTER" textFill="#1f8fe8">
+                                                   <font>
+                                                      <Font name="System Bold" size="16.0" />
+                                                   </font>
+                                                </Label>
+                                                <TextField fx:id="width__forms_textfield" prefHeight="40.0" prefWidth="284.0" promptText="Enter WIdth">
+                                                   <font>
+                                                      <Font size="16.0" />
+                                                   </font>
+                                                </TextField>
+                                             </children>
+                                          </HBox>
+                                          <HBox alignment="CENTER" spacing="40.0">
+                                             <children>
+                                                <Label alignment="CENTER_RIGHT" prefHeight="31.0" prefWidth="184.0" text="Length :" textAlignment="CENTER" textFill="#1f8fe8">
+                                                   <font>
+                                                      <Font name="System Bold" size="16.0" />
+                                                   </font>
+                                                </Label>
+                                                <TextField fx:id="length_forms_textfield" prefHeight="40.0" prefWidth="284.0" promptText="Enter Length">
+                                                   <font>
+                                                      <Font size="16.0" />
+                                                   </font>
+                                                </TextField>
+                                             </children>
+                                          </HBox>
+                                          <HBox alignment="CENTER" spacing="40.0">
+                                             <children>
+                                                <Label alignment="CENTER_RIGHT" prefHeight="31.0" prefWidth="184.0" text="Eye Height :" textAlignment="CENTER" textFill="#1f8fe8">
+                                                   <font>
+                                                      <Font name="System Bold" size="16.0" />
+                                                   </font>
+                                                </Label>
+                                                <TextField fx:id="eyeheight_forms_textfield" prefHeight="40.0" prefWidth="284.0" promptText="Enter Eye Height">
+                                                   <font>
+                                                      <Font size="16.0" />
+                                                   </font>
+                                                </TextField>
+                                             </children>
+                                          </HBox>
+                                          <HBox alignment="CENTER" spacing="40.0">
+                                             <children>
+                                                <Label alignment="CENTER_RIGHT" prefHeight="31.0" prefWidth="184.0" text="Hover Height :" textAlignment="CENTER" textFill="#1f8fe8">
+                                                   <font>
+                                                      <Font name="System Bold" size="16.0" />
+                                                   </font>
+                                                </Label>
+                                                <TextField fx:id="hover_height_forms_textfield" prefHeight="40.0" prefWidth="284.0" promptText="Enter Hover Height">
+                                                   <font>
+                                                      <Font size="16.0" />
+                                                   </font>
+                                                </TextField>
+                                             </children>
+                                          </HBox>
+                                       </children>
+                                       <padding>
+                                          <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                       </padding>
+                                    </VBox>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </VBox>
+                        <Button fx:id="forms_next_btn" layoutX="1000.0" layoutY="641.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="71.0" style=" -fx-background-color: #1f8fe8; -fx-font-weight: 900;" text="Next" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+            <Tab fx:id="moves_tab" closable="false" text="Moves">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <ComboBox fx:id="moves_combobox" layoutX="579.0" layoutY="44.0" prefHeight="31.0" prefWidth="233.0" style="-fx-font-weight: 900; -fx-font-size: 16; -fx-highlight-fill: #1f8fe8; -fx-highlight-text-fill: #ffffff;" />
+                        <Pane fx:id="levelUpMove_pane" layoutX="487.0" layoutY="93.0" prefHeight="470.0" prefWidth="503.0">
+                           <children>
+                              <TextField fx:id="level_moves_textfield" layoutX="134.0" layoutY="44.0" prefHeight="31.0" prefWidth="194.0" promptText="Enter Level">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </TextField>
+                              <TextField fx:id="attack_moves_textfield" layoutX="134.0" layoutY="90.0" prefHeight="31.0" prefWidth="194.0" promptText="Enter Attack">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </TextField>
+                              <Button fx:id="add_attack_moves_btn" layoutX="354.0" layoutY="159.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="108.0" style="-fx-background-color: #1f8fe8; -fx-font-weight: 900;" text="Add Attack" textFill="WHITE">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </Button>
+                              <Button fx:id="remove_attack_moves_btn" layoutX="354.0" layoutY="207.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="108.0" style="-fx-background-color: #FF9D00; -fx-font-weight: 900;" text="Remove" textFill="WHITE">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </Button>
+                              <Button fx:id="add_levelUpMove_btn" layoutX="36.0" layoutY="406.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="174.0" style="-fx-background-color: #1f8fe8; -fx-font-weight: 900;" text="Add Object" textFill="WHITE">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </Button>
+                              <Button fx:id="remove_levelUpMove_btn" layoutX="252.0" layoutY="406.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="174.0" style="-fx-background-color: #FF9D00; -fx-font-weight: 900;" text="Remove Object" textFill="WHITE">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </Button>
+                              <ListView fx:id="attack_moves_list" layoutX="36.0" layoutY="159.0" prefHeight="216.0" prefWidth="305.0" />
+                              <Label alignment="CENTER_RIGHT" layoutX="28.0" layoutY="44.0" prefHeight="31.0" prefWidth="66.0" text="Level :" textAlignment="CENTER" textFill="#1f8fe8">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                              </Label>
+                              <Label alignment="CENTER_RIGHT" layoutX="28.0" layoutY="90.0" prefHeight="31.0" prefWidth="66.0" text="Attack :" textAlignment="CENTER" textFill="#1f8fe8">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                              </Label>
+                           </children>
+                        </Pane>
+                        <Pane fx:id="otherMoves_pane" layoutX="487.0" layoutY="93.0" prefHeight="470.0" prefWidth="503.0" visible="false">
+                           <children>
+                              <TextField fx:id="moves_textfield" layoutX="134.0" layoutY="82.0" prefHeight="40.0" prefWidth="194.0" promptText="Enter Move">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </TextField>
+                              <Button fx:id="moves_add_btn" layoutX="182.0" layoutY="181.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="98.0" style=" -fx-background-color: #1f8fe8; -fx-font-weight: 900; -fx-border-radius: 5;" text="Add" textFill="WHITE">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Button>
+                              <Button fx:id="moves_remove_btn" layoutX="182.0" layoutY="248.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="98.0" style="-fx-background-color: #FF9D00; -fx-font-weight: 900;" text="Remove" textFill="WHITE">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </Button>
+                           </children>
+                        </Pane>
+                        <Button fx:id="moves_next_btn" layoutX="1000.0" layoutY="641.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="71.0" style="-fx-background-color: #1f8fe8; -fx-font-weight: 900;" text="Next" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                        </Button>
+                        <ListView fx:id="moves_list" layoutX="57.0" layoutY="44.0" prefHeight="536.0" prefWidth="336.0" style="-fx-font-size: 16;-fx-border-color: #1f8fe8; -fx-border-width: 2px; -fx-border-radius: 5px; -fx-highlight-fill: #1f8fe8; -fx-highlight-text-fill: #ffffff;" />
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+            <Tab fx:id="abilities_tab" closable="false" text="Abilities">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <VBox alignment="CENTER" layoutX="178.0" layoutY="180.0">
+                           <children>
+                              <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="18.0" prefWidth="80.0" text="Abilities" textFill="#1f8fe8" underline="true">
+                                <font>
+                                    <Font name="System Bold" size="16.0" />
+                                 </font>
+                              </Label>
+                              <VBox spacing="5.0">
+                                 <children>
+                                    <HBox spacing="10.0">
+                                       <children>
+                                          <TextField fx:id="abilities_textfield" prefHeight="37.0" prefWidth="209.0" promptText="Enter Ability">
+                                             <font>
+                                                <Font size="16.0" />
+                                             </font>
+                                          </TextField>
+                                          <Button fx:id="add_ability_btn" alignment="CENTER" contentDisplay="GRAPHIC_ONLY" mnemonicParsing="false" prefHeight="37.0" prefWidth="20.0">
+                                             <graphic>
+                                                <ImageView fitHeight="25.0" fitWidth="21.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@Icons/addWhite.png" />
+                                                   </image>
+                                                   <viewport>
+                                                      <Rectangle2D height="50.0" width="50.0" />
+                                                   </viewport>
+                                                </ImageView>
+                                             </graphic>
+                                          </Button>
+                                          <Button fx:id="remove_abiltites_btn" contentDisplay="GRAPHIC_ONLY" mnemonicParsing="false" prefHeight="37.0" prefWidth="32.0">
+                                             <graphic>
+                                                <ImageView fitHeight="25.0" fitWidth="21.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@Icons/removeIcon.png" />
+                                                   </image>
+                                                   <viewport>
+                                                      <Rectangle2D height="35.0" width="35.0" />
+                                                   </viewport>
+                                                </ImageView>
+                                             </graphic>
+                                          </Button>
+                                       </children>
+                                       <padding>
+                                          <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                       </padding>
+                                    </HBox>
+                                    <ListView fx:id="abilities_list" prefHeight="211.0" prefWidth="304.0" style="-fx-font-size: 16;">
+                                       <VBox.margin>
+                                          <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                       </VBox.margin>
+                                    </ListView>
+                                 </children>
+                                 <padding>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" top="5.0" />
+                                 </padding>
+                              </VBox>
+                           </children>
+                           <padding>
+                              <Insets bottom="5.0" top="10.0" />
+                           </padding>
+                        </VBox>
+                        <VBox alignment="CENTER" layoutX="621.0" layoutY="180.0">
+                           <children>
+                              <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="21.0" prefWidth="149.0" text="Hidden Abilities" textAlignment="CENTER" textFill="#1f8fe8" underline="true">
+                                 <font>
+                                    <Font name="System Bold" size="16.0" />
+                                 </font>
+                              </Label>
+                              <VBox spacing="5.0">
+                                 <children>
+                                    <HBox spacing="10.0">
+                                       <children>
+                                          <TextField fx:id="hidden_ability_textfield" prefHeight="37.0" prefWidth="209.0" promptText="Enter Ability">
+                                             <font>
+                                                <Font size="16.0" />
+                                             </font>
+                                          </TextField>
+                                          <Button fx:id="add_hiddenability_btn" alignment="CENTER" contentDisplay="GRAPHIC_ONLY" mnemonicParsing="false" prefHeight="37.0" prefWidth="20.0">
+                                             <graphic>
+                                                <ImageView fitHeight="25.0" fitWidth="21.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@Icons/addWhite.png" />
+                                                   </image>
+                                                   <viewport>
+                                                      <Rectangle2D height="50.0" width="50.0" />
+                                                   </viewport>
+                                                </ImageView>
+                                             </graphic>
+                                          </Button>
+                                          <Button fx:id="remove_hiddenabiltites_btn" contentDisplay="GRAPHIC_ONLY" mnemonicParsing="false" prefHeight="37.0" prefWidth="32.0">
+                                             <graphic>
+                                                <ImageView fitHeight="25.0" fitWidth="21.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@Icons/removeIcon.png" />
+                                                   </image>
+                                                   <viewport>
+                                                      <Rectangle2D height="35.0" width="35.0" />
+                                                   </viewport>
+                                                </ImageView>
+                                             </graphic>
+                                          </Button>
+                                       </children>
+                                       <padding>
+                                          <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                       </padding>
+                                    </HBox>
+                                    <ListView fx:id="hidden_ability_list" prefHeight="211.0" prefWidth="302.0" style="-fx-font-size: 16;">
+                                       <VBox.margin>
+                                          <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                       </VBox.margin>
+                                    </ListView>
+                                 </children>
+                                 <padding>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" top="5.0" />
+                                 </padding>
+                              </VBox>
+                           </children>
+                           <padding>
+                              <Insets bottom="5.0" top="10.0" />
+                           </padding>
+                        </VBox>
+                        <Button fx:id="abilities_next_btn" layoutX="1000.0" layoutY="641.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="71.0" style="-fx-background-color: #1f8fe8; -fx-font-weight: 900;" text="Next" textFill="WHITE">
+
+                                    </Button>
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+            <Tab fx:id="movement_tab" closable="false" text="Movement">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Label alignment="CENTER_RIGHT" layoutX="14.0" layoutY="14.0" prefHeight="31.0" prefWidth="115.0" text="Rideable :" textAlignment="CENTER" textFill="#1f8fe8">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER_RIGHT" layoutX="236.0" layoutY="14.0" prefHeight="31.0" prefWidth="115.0" text="canFly :" textAlignment="CENTER" textFill="#1f8fe8">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER_RIGHT" layoutX="500.0" layoutY="14.0" prefHeight="31.0" prefWidth="115.0" text="canSurf :" textAlignment="CENTER" textFill="#1f8fe8">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER_RIGHT" layoutX="753.0" layoutY="14.0" prefHeight="31.0" prefWidth="154.0" text="canRideShoulder :" textAlignment="CENTER" textFill="#1f8fe8">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                        </Label>
+                        <CheckBox fx:id="rideable" layoutX="142.0" layoutY="21.0" mnemonicParsing="false" />
+                        <Button fx:id="movement_next_btn" layoutX="1000.0" layoutY="641.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="71.0" style="-fx-background-color: #1f8fe8; -fx-font-weight: 900;" text="Next" textFill="WHITE">
+
+                                    </Button>
+                        <CheckBox fx:id="can_surf" layoutX="636.0" layoutY="21.0" mnemonicParsing="false" />
+                        <CheckBox fx:id="can_ride_shoulder" layoutX="928.0" layoutY="21.0" mnemonicParsing="false" />
+                        <CheckBox fx:id="can_fly" layoutX="373.0" layoutY="21.0" mnemonicParsing="false" />
+                        <Separator layoutY="49.0" prefHeight="5.0" prefWidth="1116.0" />
+                        <Pane fx:id="ridingOffSets_parameters_pane" layoutX="10.0" layoutY="53.0" prefHeight="645.0" prefWidth="187.0" visible="false">
+                           <children>
+                              <Label alignment="CENTER" layoutX="28.0" layoutY="30.0" prefHeight="31.0" prefWidth="115.0" text="Standing" textAlignment="CENTER" textFill="#1f8fe8">
+                                 <font>
+                                    <Font name="System Italic" size="16.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="standingXTF" layoutX="4.0" layoutY="64.0" promptText="x" />
+                              <TextField fx:id="standingYTF" layoutX="4.0" layoutY="104.0" promptText="y" />
+                              <TextField fx:id="standingZTF" layoutX="5.0" layoutY="144.0" promptText="z" />
+                              <TextField fx:id="movingXTF" layoutX="5.0" layoutY="217.0" promptText="x" />
+                              <TextField fx:id="movingYTF" layoutX="4.0" layoutY="257.0" promptText="y" />
+                              <TextField fx:id="movingZTF" layoutX="4.0" layoutY="297.0" promptText="z" />
+                              <Label alignment="CENTER" layoutX="28.0" layoutY="175.0" prefHeight="31.0" prefWidth="115.0" text="Moving" textAlignment="CENTER" textFill="#1f8fe8">
+                                 <font>
+                                    <Font name="System Italic" size="16.0" />
+                                 </font>
+                              </Label>
+                              <Label alignment="CENTER" layoutX="30.0" prefHeight="31.0" prefWidth="115.0" text="ridingOffSets" textAlignment="CENTER" textFill="#1f8fe8" underline="true">
+                                 <font>
+                                    <Font name="System Bold" size="16.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </Pane>
+                        <Pane fx:id="flyingParameters_pane" layoutX="222.0" layoutY="50.0" prefHeight="649.0" prefWidth="225.0" visible="false">
+                           <children>
+                              <TextField fx:id="flyHeightMinTF" layoutX="5.0" layoutY="44.0" promptText="flyHeightMIn" />
+                              <TextField fx:id="flyHeightMaxTF" layoutX="4.0" layoutY="84.0" promptText="flyHeightMax" />
+                              <TextField fx:id="flySpeedModifierTF" layoutX="4.0" layoutY="124.0" promptText="flySpeedModifier" />
+                              <TextField fx:id="flyRefreshRateYTF" layoutX="5.0" layoutY="164.0" promptText="flyRefreshRateY" />
+                              <TextField fx:id="flyRefreshRateXZTF" layoutX="5.0" layoutY="204.0" promptText="flyRefreshRateXZ" />
+                              <TextField fx:id="flyRefreshRateSpeedTF" layoutX="5.0" layoutY="244.0" promptText="flyRefreshRateSpeed" />
+                              <TextField fx:id="flightTimeMinTF" layoutX="4.0" layoutY="284.0" promptText="flightTimeMin" />
+                              <TextField fx:id="flightTimeMaxTF" layoutX="4.0" layoutY="324.0" promptText="flightTimeMax" />
+                              <TextField fx:id="flapRateTF" layoutX="4.0" layoutY="364.0" promptText="flapRate" />
+                              <ComboBox fx:id="landing_material_combo_box" editable="true" layoutX="4.0" layoutY="403.0" prefWidth="150.0" promptText="LandingMaterials" />
+                              <Label alignment="CENTER" layoutX="23.0" prefHeight="31.0" prefWidth="146.0" text="flyingParameters" textAlignment="CENTER" textFill="#1f8fe8" underline="true">
+                                 <font>
+                                    <Font name="System Bold" size="16.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </Pane>
+                        <Pane fx:id="mountedFlyingParameters_pane" layoutX="464.0" layoutY="50.0" prefHeight="642.0" prefWidth="262.0" visible="false">
+                           <children>
+                              <TextField fx:id="type_mounted_TF" layoutX="10.0" layoutY="44.0" promptText="type" text="pixelmon:default" />
+                              <TextField fx:id="upper_angle_limit_TF" layoutX="10.0" layoutY="79.0" promptText="upper_angle_limit" />
+                              <TextField fx:id="lower_angle_limit_TF" layoutX="10.0" layoutY="113.0" promptText="lower_angle_limit" />
+                              <TextField fx:id="max_fly_speed_TF" layoutX="10.0" layoutY="147.0" promptText="max_fly_speed" />
+                              <TextField fx:id="deceleration_rate_TF" layoutX="10.0" layoutY="184.0" promptText="deceleration_rate" />
+                              <TextField fx:id="hover_deceleration_rate_TF" layoutX="10.0" layoutY="218.0" promptText="hover_deceleration_rate" />
+                              <TextField fx:id="acceleration_rate_TF" layoutX="10.0" layoutY="253.0" promptText="acceleration_rate" />
+                              <TextField fx:id="strafe_acceleration_rate" layoutX="10.0" layoutY="288.0" promptText="strafe_acceleration_rate" />
+                              <Label alignment="CENTER" prefHeight="31.0" prefWidth="225.0" text="mountedFlyingParameters" textAlignment="CENTER" textFill="#1f8fe8" underline="true">
+                                 <font>
+                                    <Font name="System Bold" size="16.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="strafe_roll_conversion_TF" layoutX="10.0" layoutY="325.0" promptText="strafe_roll_conversion" />
+                              <TextField fx:id="turn_rate_TF" layoutX="10.0" layoutY="360.0" promptText="turn_rate" />
+                              <TextField fx:id="pitch_rate_TF" layoutX="10.0" layoutY="396.0" promptText="pitch_rate" />
+                              <Label alignment="CENTER_RIGHT" layoutY="421.0" prefHeight="31.0" prefWidth="217.0" text="stays_horizontal_flying : " textAlignment="CENTER" textFill="#1f8fe8">
+                                 <font>
+                                    <Font name="System Italic" size="16.0" />
+                                 </font>
+                              </Label>
+                              <CheckBox fx:id="stays_horizontal_flying_checkbox" layoutX="221.0" layoutY="428.0" mnemonicParsing="false" />
+                              <TextField fx:id="gravity_drop_per_tick_TF" layoutX="10.0" layoutY="452.0" promptText="gravity_drop_per_tick" />
+                              <Label alignment="CENTER_RIGHT" layoutY="477.0" prefHeight="31.0" prefWidth="217.0" text="continuous_forward_motion : " textAlignment="CENTER" textFill="#1f8fe8">
+                                 <font>
+                                    <Font name="System Italic" size="16.0" />
+                                 </font>
+                              </Label>
+                              <CheckBox fx:id="continuous_forward_motion_checkbox" layoutX="221.0" layoutY="487.0" mnemonicParsing="false" />
+                              <TextField fx:id="continuous_forward_motion_TF" layoutX="10.0" layoutY="508.0" promptText="continuous_forward_motion_ticks" />
+                              <TextField fx:id="flying_stamina_charges_TF" layoutX="10.0" layoutY="545.0" promptText="flying_stamina_charges" />
+                              <TextField fx:id="hover_ticks_TF" layoutX="10.0" layoutY="577.0" promptText="hover_ticks" />
+                           </children>
+                        </Pane>
+                        <Pane fx:id="swimmingParameters_pane" layoutX="736.0" layoutY="49.0" prefHeight="651.0" prefWidth="256.0" visible="false">
+                           <children>
+                              <TextField fx:id="depthRangeStartTF" layoutX="10.0" layoutY="37.0" promptText="depthRangeStart" />
+                              <TextField fx:id="depthRangeEndTF" layoutX="10.0" layoutY="70.0" promptText="depthRangeEnd" />
+                              <TextField fx:id="swimSpeedTF" layoutX="10.0" layoutY="103.0" promptText="swimSpeed" />
+                              <TextField fx:id="decayRateTF" layoutX="10.0" layoutY="135.0" promptText="decayRate" />
+                              <TextField fx:id="refreshRateTF" layoutX="10.0" layoutY="167.0" promptText="refreshRate" />
+                              <Label alignment="CENTER" layoutX="28.0" prefHeight="31.0" prefWidth="174.0" text="swimmingParameters" textAlignment="CENTER" textFill="#1f8fe8" underline="true">
+                                 <font>
+                                    <Font name="System Bold" size="16.0" />
+                                 </font>
+                              </Label>
+                              <CheckBox fx:id="addBlockPart_checkBox" layoutX="10.0" layoutY="197.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="126.0" text="  ADD BLOCK PART" textFill="#1f8fe8">
+                                 <effect>
+                                    <ColorAdjust />
+                                 </effect>
+                                 <font>
+                                    <Font size="10.0" />
+                                 </font>
+                              </CheckBox>
+                              <Pane fx:id="block_pane" layoutX="12.0" layoutY="223.0" visible="false">
+                                 <children>
+                                    <TextField fx:id="chanceToSopOnBlockTF" layoutX="1.0" promptText="chanceToStopOnBlock" />
+                                    <TextField fx:id="minStopTimeTF" layoutX="1.0" layoutY="31.0" promptText="minStopTime" />
+                                    <TextField fx:id="maxStopTimeTF" layoutX="1.0" layoutY="63.0" promptText="maxStopTime" />
+                                    <TextField fx:id="minStopCooldownTimeTF" layoutX="1.0" layoutY="95.0" promptText="minStopCooldownTime" />
+                                    <TextField fx:id="maxStopCooldownTimeTF" layoutX="1.0" layoutY="128.0" promptText="maxStopCooldownTime" />
+                                    <ComboBox fx:id="blocksToStopOn_combo_box" layoutY="161.0" prefHeight="25.0" prefWidth="174.0" promptText="blocksToStopOn" />
+                                    <ListView fx:id="block_list" layoutY="194.0" prefHeight="146.0" prefWidth="233.0" />
+                                    <Button fx:id="addBlock_btn" layoutX="179.0" layoutY="161.0" mnemonicParsing="false" text="+" />
+                                    <Button fx:id="removeBlock_btn" layoutX="208.0" layoutY="161.0" mnemonicParsing="false" prefWidth="25.0" text="-" />
+                                 </children>
+                              </Pane>
+                              <Label fx:id="canRotateWhileStopped_Label" alignment="CENTER_RIGHT" layoutX="12.0" layoutY="594.0" prefHeight="31.0" prefWidth="184.0" text="canRotateWhileStopped : " textAlignment="CENTER" textFill="#1f8fe8" visible="false">
+                                 <font>
+                                    <Font name="System Italic" size="16.0" />
+                                 </font>
+                              </Label>
+                              <CheckBox fx:id="canRotateWhileStoppedCheckBox" layoutX="207.0" layoutY="601.0" mnemonicParsing="false" visible="false" />
+                              <CheckBox fx:id="addCanRotateWhileStopped_CheckBox" layoutX="10.0" layoutY="569.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="244.0" text="  ADD CANROTATEWHILESTOPPED BOOLEAN" textFill="#1f8fe8">
+                                 <effect>
+                                    <ColorAdjust />
+                                 </effect>
+                                 <font>
+                                    <Font size="10.0" />
+                                 </font>
+                              </CheckBox>
+                           </children>
+                        </Pane>
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+            <Tab fx:id="aggression_tab" closable="false" text="Aggression">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Button fx:id="aggression_next_btn" layoutX="1000.0" layoutY="641.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="71.0" style="-fx-background-color: #1f8fe8; -fx-font-weight: 900;" text="Next" textFill="WHITE">
+
+                                    </Button>
+                        <VBox layoutX="356.0" layoutY="223.0" spacing="10.0">
+                           <children>
+                              <HBox spacing="20.0">
+                                 <children>
+                                    <Label alignment="CENTER_RIGHT" prefHeight="31.0" prefWidth="119.0" text="Timid :" textAlignment="CENTER" textFill="#1f8fe8">
+                                       <font>
+                                          <Font name="System Bold" size="16.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="timid_aggression_textfield" prefHeight="31.0" prefWidth="284.0" promptText="Enter Timid">
+                                       <font>
+                                          <Font size="16.0" />
+                                       </font>
+                                    </TextField>
+                                 </children>
+                              </HBox>
+                              <HBox spacing="20.0">
+                                 <children>
+                                    <Label alignment="CENTER_RIGHT" prefHeight="31.0" prefWidth="119.0" text="Passive :" textAlignment="CENTER" textFill="#1f8fe8">
+                                       <font>
+                                          <Font name="System Bold" size="16.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="passive_aggression_textfield" prefHeight="31.0" prefWidth="284.0" promptText="Enter Passive">
+                                       <font>
+                                          <Font size="16.0" />
+                                       </font>
+                                    </TextField>
+                                 </children>
+                              </HBox>
+                              <HBox spacing="20.0">
+                                 <children>
+                                    <Label alignment="CENTER_RIGHT" prefHeight="31.0" prefWidth="119.0" text="Aggressive :" textAlignment="CENTER" textFill="#1f8fe8">
+                                       <font>
+                                          <Font name="System Bold" size="16.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="aggressive_aggression_textfield" prefHeight="31.0" prefWidth="284.0" promptText="Enter Aggressive">
+                                       <font>
+                                          <Font size="16.0" />
+                                       </font>
+                                    </TextField>
+                                 </children>
+                              </HBox>
+                           </children>
+                           <padding>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </padding>
+                        </VBox>
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+            <Tab fx:id="battle_stats_tab" closable="false" text="Battle Stats">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Button fx:id="battlestats_next_btn" layoutX="1000.0" layoutY="641.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="71.0" style="-fx-background-color: #1f8fe8; -fx-font-weight: 900;" text="Next" textFill="WHITE">
+
+                                    </Button>
+                        <VBox layoutX="296.0" layoutY="201.0" spacing="10.0">
+                           <children>
+                              <HBox spacing="65.0">
+                                 <children>
+                                    <Label alignment="CENTER_RIGHT" prefHeight="31.0" prefWidth="139.0" text="Hp :" textAlignment="CENTER" textFill="#1f8fe8">
+                                       <font>
+                                          <Font name="System Bold" size="16.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="hp_battlestats_textfield" prefHeight="31.0" prefWidth="284.0" promptText="Enter Hp">
+                                       <font>
+                                          <Font size="16.0" />
+                                       </font>
+                                    </TextField>
+                                 </children>
+                              </HBox>
+                              <HBox spacing="65.0">
+                                 <children>
+                                    <Label alignment="CENTER_RIGHT" prefHeight="31.0" prefWidth="139.0" text="Attack :" textAlignment="CENTER" textFill="#1f8fe8">
+                                       <font>
+                                          <Font name="System Bold" size="16.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="attack_battlestats_textfield" prefHeight="31.0" prefWidth="284.0" promptText="Enter Attack">
+                                       <font>
+                                          <Font size="16.0" />
+                                       </font>
+                                    </TextField>
+                                 </children>
+                              </HBox>
+                              <HBox spacing="65.0">
+                                 <children>
+                                    <Label alignment="CENTER_RIGHT" prefHeight="31.0" prefWidth="139.0" text="Defense :" textAlignment="CENTER" textFill="#1f8fe8">
+                                       <font>
+                                          <Font name="System Bold" size="16.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="defense_battlestats_textfield" prefHeight="31.0" prefWidth="284.0" promptText="Enter Defense">
+                                       <font>
+                                          <Font size="16.0" />
+                                       </font>
+                                    </TextField>
+                                 </children>
+                              </HBox>
+                              <HBox spacing="65.0">
+                                 <children>
+                                    <Label alignment="CENTER_RIGHT" prefHeight="31.0" prefWidth="139.0" text="Special Attack :" textAlignment="CENTER" textFill="#1f8fe8">
+                                       <font>
+                                          <Font name="System Bold" size="16.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="special_attack_battlestats_textfield" prefHeight="31.0" prefWidth="284.0" promptText="Enter Special Attack">
+                                       <font>
+                                          <Font size="16.0" />
+                                       </font>
+                                    </TextField>
+                                 </children>
+                              </HBox>
+                              <HBox spacing="65.0">
+                                 <children>
+                                    <Label alignment="CENTER_RIGHT" prefHeight="31.0" prefWidth="139.0" text="Special Defense :" textAlignment="CENTER" textFill="#1f8fe8">
+                                       <font>
+                                          <Font name="System Bold" size="16.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="special_defense_battlestats_textfield" prefHeight="31.0" prefWidth="284.0" promptText="Enter Special Defense">
+                                       <font>
+                                          <Font size="16.0" />
+                                       </font>
+                                    </TextField>
+                                 </children>
+                              </HBox>
+                              <HBox spacing="65.0">
+                                 <children>
+                                    <Label alignment="CENTER_RIGHT" prefHeight="31.0" prefWidth="139.0" text="Speed :" textAlignment="CENTER" textFill="#1f8fe8">
+                                       <font>
+                                          <Font name="System Bold" size="16.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="speed_battlestats_textfield" prefHeight="31.0" prefWidth="284.0" promptText="Enter Speed">
+                                       <font>
+                                          <Font size="16.0" />
+                                       </font>
+                                    </TextField>
+                                 </children>
+                              </HBox>
+                           </children>
+                           <padding>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </padding>
+                        </VBox>
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+            <Tab fx:id="tags_tab" closable="false" text="Tags">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <VBox layoutX="407.0" layoutY="135.0">
+                           <children>
+                              <HBox spacing="10.0">
+                                 <children>
+                                    <TextField fx:id="tag_textfield" prefHeight="37.0" prefWidth="215.0" promptText="Enter Tag">
+                                       <font>
+                                          <Font size="16.0" />
+                                       </font>
+                                    </TextField>
+                                    <Button fx:id="add_tag_btn" alignment="CENTER" contentDisplay="GRAPHIC_ONLY" mnemonicParsing="false" prefHeight="37.0" prefWidth="20.0">
+                                       <graphic>
+                                          <ImageView fitHeight="25.0" fitWidth="21.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@Icons/addWhite.png" />
+                                             </image>
+                                             <viewport>
+                                                <Rectangle2D height="50.0" width="50.0" />
+                                             </viewport>
+                                          </ImageView>
+                                       </graphic>
+                                    </Button>
+                                    <Button fx:id="remove_tag_btn" contentDisplay="GRAPHIC_ONLY" mnemonicParsing="false" prefHeight="37.0" prefWidth="32.0">
+                                       <graphic>
+                                          <ImageView fitHeight="25.0" fitWidth="21.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@Icons/removeIcon.png" />
+                                             </image>
+                                             <viewport>
+                                                <Rectangle2D height="35.0" width="35.0" />
+                                             </viewport>
+                                          </ImageView>
+                                       </graphic>
+                                    </Button>
+                                 </children>
+                                 <padding>
+                                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                 </padding>
+                              </HBox>
+                              <ListView fx:id="tag_list" prefHeight="373.0" prefWidth="310.0" style="-fx-font-size: 16;">
+                                 <VBox.margin>
+                                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                 </VBox.margin>
+                              </ListView>
+                           </children>
+                           <padding>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </padding>
+                        </VBox>
+                        <Button fx:id="tags_next_btn" layoutX="1000.0" layoutY="641.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="71.0" style="-fx-background-color: #1f8fe8; -fx-font-weight: 900;" text="Next" textFill="WHITE">
+
+                                    </Button>
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+            <Tab fx:id="spawn_tab" closable="false" text="Spawn">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <VBox layoutX="272.0" layoutY="89.0" spacing="10.0">
+                           <children>
+                              <HBox spacing="20.0">
+                                 <children>
+                                    <Label alignment="CENTER_RIGHT" prefHeight="31.0" prefWidth="174.0" text="baseExp :" textAlignment="CENTER" textFill="#1f8fe8">
+                                       <font>
+                                          <Font name="System Bold" size="16.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="baseExp_spawn_textfield" prefHeight="31.0" prefWidth="284.0" promptText="Enter baseExp">
+                                       <font>
+                                          <Font size="16.0" />
+                                       </font>
+                                    </TextField>
+                                 </children>
+                              </HBox>
+                              <HBox spacing="20.0">
+                                 <children>
+                                    <Label alignment="CENTER_RIGHT" prefHeight="31.0" prefWidth="174.0" text="baseFriendship :" textAlignment="CENTER" textFill="#1f8fe8">
+                                       <font>
+                                          <Font name="System Bold" size="16.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="baseFriendship_spawn_textfield" prefHeight="31.0" prefWidth="284.0" promptText="Enter baseFriendship">
+                                       <font>
+                                          <Font size="16.0" />
+                                       </font>
+                                    </TextField>
+                                 </children>
+                              </HBox>
+                              <HBox spacing="20.0">
+                                 <children>
+                                    <Label alignment="CENTER_RIGHT" prefHeight="31.0" prefWidth="174.0" text="spawnLevel :" textAlignment="CENTER" textFill="#1f8fe8">
+                                       <font>
+                                          <Font name="System Bold" size="16.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="spawn_level_spawn_textfield" prefHeight="31.0" prefWidth="284.0" promptText="Enter Spawn Level">
+                                       <font>
+                                          <Font size="16.0" />
+                                       </font>
+                                    </TextField>
+                                 </children>
+                              </HBox>
+                              <HBox spacing="20.0">
+                                 <children>
+                                    <Label alignment="CENTER_RIGHT" prefHeight="31.0" prefWidth="174.0" text="spawnLevelRange :" textAlignment="CENTER" textFill="#1f8fe8">
+                                       <font>
+                                          <Font name="System Bold" size="16.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="spawn_level_range_spawn_textfield" prefHeight="31.0" prefWidth="284.0" promptText="Enter Spawn Level Range">
+                                       <font>
+                                          <Font size="16.0" />
+                                       </font>
+                                    </TextField>
+                                 </children>
+                              </HBox>
+                           </children>
+                           <padding>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </padding>
+                        </VBox>
+                        <VBox alignment="CENTER" layoutX="443.0" layoutY="279.0">
+                           <children>
+                              <Label alignment="CENTER" prefHeight="31.0" prefWidth="174.0" text="Spawn Locations" textAlignment="CENTER" textFill="#1f8fe8">
+                                 <font>
+                                    <Font name="System Bold" size="16.0" />
+                                 </font>
+                              </Label>
+                              <VBox spacing="5.0">
+                                 <children>
+                                    <HBox spacing="10.0">
+                                       <children>
+                                          <TextField fx:id="spawn_location__spawn_textfield" prefHeight="37.0" prefWidth="216.0" promptText="Enter Spawn Location">
+                                             <font>
+                                                <Font size="16.0" />
+                                             </font>
+                                          </TextField>
+                                          <Button fx:id="add_location_spawn_btn" alignment="CENTER" contentDisplay="GRAPHIC_ONLY" mnemonicParsing="false" prefHeight="37.0" prefWidth="20.0">
+                                             <graphic>
+                                                <ImageView fitHeight="25.0" fitWidth="21.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@Icons/addWhite.png" />
+                                                   </image>
+                                                   <viewport>
+                                                      <Rectangle2D height="50.0" width="50.0" />
+                                                   </viewport>
+                                                </ImageView>
+                                             </graphic>
+                                          </Button>
+                                          <Button fx:id="remove_location_spawn_btn" contentDisplay="GRAPHIC_ONLY" mnemonicParsing="false" prefHeight="37.0" prefWidth="32.0">
+                                             <graphic>
+                                                <ImageView fitHeight="25.0" fitWidth="21.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@Icons/removeIcon.png" />
+                                                   </image>
+                                                   <viewport>
+                                                      <Rectangle2D height="35.0" width="35.0" />
+                                                   </viewport>
+                                                </ImageView>
+                                             </graphic>
+                                          </Button>
+                                       </children>
+                                       <padding>
+                                          <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                       </padding>
+                                    </HBox>
+                                    <ListView fx:id="spawn_location_list" prefHeight="249.0" prefWidth="313.0" style="-fx-font-size: 16;">
+                                       <VBox.margin>
+                                          <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                       </VBox.margin>
+                                    </ListView>
+                                 </children>
+                                 <padding>
+                                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                 </padding>
+                              </VBox>
+                           </children>
+                           <padding>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </padding>
+                        </VBox>
+                        <Button fx:id="spawn_next_btn" layoutX="1000.0" layoutY="641.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="71.0" style="-fx-background-color: #1f8fe8; -fx-font-weight: 900;" text="Next" textFill="WHITE">
+
+                                    </Button>
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+            <Tab fx:id="possible_gender_tab" closable="false" text="PossibleGenders">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <VBox layoutX="391.0" layoutY="180.0" prefHeight="336.0" prefWidth="318.0" spacing="10.0">
+                           <children>
+                              <HBox alignment="CENTER_LEFT" prefHeight="37.0" prefWidth="309.0" spacing="10.0">
+                                 <children>
+                                    <ComboBox fx:id="gender_possibleGender_combobox" editable="true" prefHeight="37.0" prefWidth="204.0" promptText="Enter Gender" style="-fx-font-size: 16;" />
+                                    <Button fx:id="add_gender_btn" alignment="CENTER" contentDisplay="GRAPHIC_ONLY" mnemonicParsing="false" prefHeight="37.0" prefWidth="20.0">
+                                       <graphic>
+                                          <ImageView fitHeight="25.0" fitWidth="21.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@Icons/addWhite.png" />
+                                             </image>
+                                             <viewport>
+                                                <Rectangle2D height="50.0" width="50.0" />
+                                             </viewport>
+                                          </ImageView>
+                                       </graphic>
+                                    </Button>
+                                    <Button fx:id="remove_gender_btn" contentDisplay="GRAPHIC_ONLY" mnemonicParsing="false" prefHeight="37.0" prefWidth="32.0">
+                                       <graphic>
+                                          <ImageView fitHeight="25.0" fitWidth="21.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@Icons/removeIcon.png" />
+                                             </image>
+                                             <viewport>
+                                                <Rectangle2D height="35.0" width="35.0" />
+                                             </viewport>
+                                          </ImageView>
+                                       </graphic>
+                                    </Button>
+                                 </children>
+                              </HBox>
+                              <ListView fx:id="gender_list" prefHeight="269.0" prefWidth="299.0" style="-fx-font-size: 16;" />
+                           </children>
+                           <padding>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </padding>
+                        </VBox>
+                        <Button fx:id="possible_next_btn" layoutX="1000.0" layoutY="641.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="71.0" style="-fx-background-color: #1f8fe8; -fx-font-weight: 900;" text="Next" textFill="WHITE">
+
+                                    </Button>
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+            <Tab fx:id="gender_properties_tab" closable="false" text="GenderProperites">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="632.0" prefWidth="988.0">
+                     <children>
+                        <Button fx:id="genderproperties_next_btn" layoutX="1000.0" layoutY="641.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="71.0" style="-fx-background-color: #1f8fe8; -fx-font-weight: 900;" text="Next" textFill="WHITE">
+
+                                    </Button>
+                        <ListView fx:id="genderProperties_list" layoutX="32.0" layoutY="195.0" prefHeight="415.0" prefWidth="1053.0" style="-fx-font-size: 16;" />
+                        <HBox layoutX="32.0" layoutY="641.0" spacing="20.0">
+                           <children>
+                              <Button fx:id="add_gender_property_btn" mnemonicParsing="false" prefHeight="39.0" prefWidth="213.0" style="-fx-background-color: #1f8fe8; -fx-font-weight: 900;" text="Add Gender Property" textFill="WHITE">
+
+                                    </Button>
+                              <Button fx:id="remove_genderproperty_btn" mnemonicParsing="false" prefHeight="39.0" prefWidth="142.0" style="-fx-background-color: #FF9D00; -fx-font-weight: 900;" text="Remove" textFill="WHITE">
+
+                                    </Button>
+                           </children>
+                        </HBox>
+                        <Label layoutX="510.0" layoutY="14.0" text="Gender Properties" textFill="#1f8fe8" underline="true">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        <VBox layoutX="32.0" layoutY="78.0" spacing="20.0" AnchorPane.topAnchor="78.0">
+                           <children>
+                              <HBox spacing="20.0">
+                                 <children>
+                                    <Label alignment="CENTER_RIGHT" prefHeight="31.0" prefWidth="87.0" text="gender :" textAlignment="CENTER" textFill="#1f8fe8">
+                                       <font>
+                                          <Font name="System Bold" size="16.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="genderproperties_gender_textfield" prefHeight="31.0" prefWidth="231.0" promptText="Enter Gender">
+                                       <font>
+                                          <Font size="16.0" />
+                                       </font>
+                                    </TextField>
+                                 </children>
+                              </HBox>
+                              <HBox prefHeight="39.0" prefWidth="347.0" spacing="20.0">
+                                 <children>
+                                    <Button fx:id="add_palette_btn" mnemonicParsing="false" prefHeight="39.0" prefWidth="144.0" style="-fx-background-color: #1f8fe8; -fx-font-weight: 900;" text="Add Palette" textFill="WHITE">
+
+                                    </Button>
+                                    <Button fx:id="edit_genderProperty_btn" mnemonicParsing="false" prefHeight="39.0" prefWidth="144.0" style=" -fx-background-color: #2c5364; -fx-font-weight: 900;" text="Edit" textFill="WHITE">
+
+                                    </Button>
+                                 </children>
+                                 <padding>
+                                    <Insets left="20.0" right="20.0" />
+                                 </padding>
+                              </HBox>
+                           </children>
+                           <padding>
+                              <Insets bottom="10.0" top="10.0" />
+                           </padding>
+                        </VBox>
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+            <Tab fx:id="other_objects_tab" text="Other Objects">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <VBox layoutX="53.0" layoutY="87.0" spacing="10.0">
+                           <children>
+                              <ComboBox fx:id="other_objects_combobox" prefHeight="39.0" prefWidth="304.0" />
+                              <HBox prefHeight="50.0" prefWidth="304.0" spacing="10.0">
+                                 <children>
+                                    <TextField fx:id="objects_textfield" prefHeight="37.0" prefWidth="224.0" promptText="Select Field" />
+                                    <Button fx:id="add_object_btn" alignment="CENTER" contentDisplay="GRAPHIC_ONLY" mnemonicParsing="false" prefHeight="37.0" prefWidth="20.0">
+                                       <graphic>
+                                          <ImageView fitHeight="25.0" fitWidth="21.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@Icons/addWhite.png" />
+                                             </image>
+                                             <viewport>
+                                                <Rectangle2D height="50.0" width="50.0" />
+                                             </viewport>
+                                          </ImageView>
+                                       </graphic>
+                                    </Button>
+                                    <Button fx:id="remove_object_btn" contentDisplay="GRAPHIC_ONLY" mnemonicParsing="false" prefHeight="37.0" prefWidth="32.0">
+                                       <graphic>
+                                          <ImageView fitHeight="25.0" fitWidth="21.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@Icons/removeIcon.png" />
+                                             </image>
+                                             <viewport>
+                                                <Rectangle2D height="35.0" width="35.0" />
+                                             </viewport>
+                                          </ImageView>
+                                       </graphic>
+                                    </Button>
+                                 </children>
+                                 <padding>
+                                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                 </padding>
+                              </HBox>
+                              <ListView fx:id="objects_listview" prefHeight="390.0" prefWidth="305.0" style="-fx-font-size: 16;" />
+                           </children>
+                           <padding>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </padding>
+                        </VBox>
+                        <VBox layoutX="524.0" layoutY="102.0" spacing="40.0">
+                           <children>
+                              <HBox spacing="40.0">
+                                 <children>
+                                    <Label alignment="CENTER_RIGHT" prefHeight="31.0" prefWidth="174.0" text="defaultBaseForm :" textAlignment="CENTER" textFill="#1f8fe8">
+                                       <font>
+                                          <Font name="System Bold" size="16.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="defaultBaseForm_textfield" prefHeight="30.0" prefWidth="218.0" promptText="defaultBaseForm" />
+                                 </children>
+                              </HBox>
+                              <VBox alignment="CENTER">
+                                 <children>
+                                    <Label alignment="CENTER" prefHeight="31.0" prefWidth="174.0" text="Gigantamax" textAlignment="CENTER" textFill="#1270b9" underline="true">
+                                       <font>
+                                          <Font name="System Bold" size="16.0" />
+                                       </font>
+                                    </Label>
+                                    <VBox alignment="CENTER_LEFT" fillWidth="false" spacing="5.0">
+                                       <children>
+                                          <HBox alignment="CENTER" spacing="40.0">
+                                             <children>
+                                                <Label alignment="CENTER_RIGHT" prefHeight="31.0" prefWidth="174.0" text="canHaveFactor :" textAlignment="CENTER" textFill="#1f8fe8">
+                                                   <font>
+                                                      <Font name="System Bold" size="16.0" />
+                                                   </font>
+                                                </Label>
+                                                <CheckBox fx:id="canHaveFactor" mnemonicParsing="false" />
+                                             </children>
+                                          </HBox>
+                                          <HBox alignment="CENTER" spacing="40.0">
+                                             <children>
+                                                <Label alignment="CENTER_RIGHT" prefHeight="31.0" prefWidth="174.0" text="canGigantamax :" textAlignment="CENTER" textFill="#1f8fe8">
+                                                   <font>
+                                                      <Font name="System Bold" size="16.0" />
+                                                   </font>
+                                                </Label>
+                                                <CheckBox fx:id="canGiganTamax" mnemonicParsing="false" />
+                                             </children>
+                                          </HBox>
+                                          <HBox spacing="40.0">
+                                             <children>
+                                                <Label alignment="CENTER_RIGHT" prefHeight="31.0" prefWidth="174.0" text="form :" textAlignment="CENTER" textFill="#1f8fe8">
+                                                   <font>
+                                                      <Font name="System Bold" size="16.0" />
+                                                   </font>
+                                                </Label>
+                                                <TextField fx:id="form_other_textfield" prefHeight="30.0" prefWidth="218.0" promptText="form" text="gmax" />
+                                             </children>
+                                          </HBox>
+                                          <HBox spacing="40.0">
+                                             <children>
+                                                <Label alignment="CENTER_RIGHT" prefHeight="31.0" prefWidth="174.0" text="move :" textAlignment="CENTER" textFill="#1f8fe8">
+                                                   <font>
+                                                      <Font name="System Bold" size="16.0" />
+                                                   </font>
+                                                </Label>
+                                                <TextField fx:id="move_other_textfield" prefHeight="30.0" prefWidth="218.0" promptText="move" />
+                                             </children>
+                                          </HBox>
+                                       </children>
+                                       <padding>
+                                          <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                       </padding>
+                                    </VBox>
+                                 </children>
+                                 <padding>
+                                    <Insets bottom="10.0" right="5.0" top="5.0" />
+                                 </padding>
+                              </VBox>
+                              <VBox spacing="10.0">
+                                 <children>
+                                    <HBox spacing="40.0">
+                                       <children>
+                                          <Label alignment="CENTER_RIGHT" prefHeight="31.0" prefWidth="174.0" text="Egg Cycles :" textAlignment="CENTER" textFill="#1f8fe8">
+                                             <font>
+                                                <Font name="System Bold" size="16.0" />
+                                             </font>
+                                          </Label>
+                                          <TextField fx:id="eggCycles_textfield" prefHeight="30.0" prefWidth="218.0" promptText="Egg Cycles" />
+                                       </children>
+                                    </HBox>
+                                    <HBox spacing="40.0">
+                                       <children>
+                                          <Label alignment="CENTER_RIGHT" prefHeight="31.0" prefWidth="174.0" text="Weight :" textAlignment="CENTER" textFill="#1f8fe8">
+                                             <font>
+                                                <Font name="System Bold" size="16.0" />
+                                             </font>
+                                          </Label>
+                                          <TextField fx:id="weight_textfield" prefHeight="30.0" prefWidth="218.0" promptText="Weight" />
+                                       </children>
+                                    </HBox>
+                                    <HBox spacing="40.0">
+                                       <children>
+                                          <Label alignment="CENTER_RIGHT" prefHeight="31.0" prefWidth="174.0" text="Catch Rate :" textAlignment="CENTER" textFill="#1f8fe8">
+                                             <font>
+                                                <Font name="System Bold" size="16.0" />
+                                             </font>
+                                          </Label>
+                                          <TextField fx:id="catchRate_textfield" prefHeight="30.0" prefWidth="218.0" promptText="Catch Rate" />
+                                       </children>
+                                    </HBox>
+                                    <HBox spacing="40.0">
+                                       <children>
+                                          <Label alignment="CENTER_RIGHT" prefHeight="31.0" prefWidth="174.0" text="Male Percentage :" textAlignment="CENTER" textFill="#1f8fe8">
+                                             <font>
+                                                <Font name="System Bold" size="16.0" />
+                                             </font>
+                                          </Label>
+                                          <TextField fx:id="malePercentage_textfield" prefHeight="30.0" prefWidth="218.0" promptText="Male Percentage" />
+                                       </children>
+                                    </HBox>
+                                 </children>
+                                 <padding>
+                                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                 </padding>
+                              </VBox>
+                           </children>
+                           <padding>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </padding>
+                        </VBox>
+                        <Button fx:id="otherobject_next_btn" layoutX="1000.0" layoutY="641.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="71.0" style="-fx-background-color: #1f8fe8; -fx-font-weight: 900;" text="Next" textFill="WHITE">
+
+                                    </Button>
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+            <Tab fx:id="evolutions_tab" text="Evolutions">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <ListView fx:id="evolution_list" layoutX="41.0" layoutY="47.0" prefHeight="287.0" prefWidth="739.0" style="-fx-border-color: #1f8fe8; -fx-border-width: 1px; -fx-font-size: 16;" />
+                        <Button fx:id="add_evolution_btn" layoutX="818.0" layoutY="103.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="139.0" style="-fx-background-color: #1f8fe8; -fx-font-weight: 900;" text="Add Evolution" textFill="WHITE">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="remove_evolution_btn" layoutX="817.0" layoutY="160.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="142.0" style="-fx-background-color: #FF9D00; -fx-font-weight: 900;" text="Remove" textFill="WHITE">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="edit_evolution_btn" layoutX="817.0" layoutY="216.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="143.0" style=" -fx-background-color: #2c5364; -fx-font-weight: 900;" text="Edit" textFill="WHITE">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Button>
+                        <Pane fx:id="evYields_pane" layoutX="41.0" layoutY="355.0">
+                           <children>
+                              <Label alignment="CENTER" layoutX="74.0" prefHeight="31.0" prefWidth="174.0" text="evYields" textAlignment="CENTER" textFill="#1f8fe8" underline="true">
+                                 <font>
+                                    <Font name="System Bold" size="16.0" />
+                                 </font>
+                              </Label>
+                              <Label alignment="CENTER_RIGHT" layoutX="30.0" layoutY="46.0" prefHeight="31.0" prefWidth="99.0" text="hp :" textAlignment="CENTER" textFill="#1f8fe8">
+                                 <font>
+                                    <Font name="System Bold" size="16.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="hp_evolution_textfield" layoutX="150.0" layoutY="46.0" prefHeight="30.0" prefWidth="151.0" />
+                              <Label alignment="CENTER_RIGHT" layoutX="31.0" layoutY="92.0" prefHeight="31.0" prefWidth="99.0" text="attack :" textAlignment="CENTER" textFill="#1f8fe8">
+                                 <font>
+                                    <Font name="System Bold" size="16.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="attack_evolution_textfield" layoutX="151.0" layoutY="92.0" prefHeight="30.0" prefWidth="151.0" />
+                              <Label alignment="CENTER_RIGHT" layoutX="30.0" layoutY="136.0" prefHeight="31.0" prefWidth="99.0" text="defense :" textAlignment="CENTER" textFill="#1f8fe8">
+                                 <font>
+                                    <Font name="System Bold" size="16.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="defense_evolution_textfield" layoutX="150.0" layoutY="136.0" prefHeight="30.0" prefWidth="151.0" />
+                              <Label alignment="CENTER_RIGHT" layoutX="10.0" layoutY="182.0" prefHeight="31.0" prefWidth="120.0" text="specialAttack :" textAlignment="CENTER" textFill="#1f8fe8">
+                                 <font>
+                                    <Font name="System Bold" size="16.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="specialAttack_evolution_textfield" layoutX="151.0" layoutY="182.0" prefHeight="30.0" prefWidth="151.0" />
+                              <Label alignment="CENTER_RIGHT" layoutY="227.0" prefHeight="31.0" prefWidth="129.0" text="specialDefense :" textAlignment="CENTER" textFill="#1f8fe8">
+                                 <font>
+                                    <Font name="System Bold" size="16.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="specialDefense_evolution_textfield" layoutX="150.0" layoutY="227.0" prefHeight="30.0" prefWidth="151.0" />
+                              <Label alignment="CENTER_RIGHT" layoutY="273.0" prefHeight="31.0" prefWidth="129.0" text="speed :" textAlignment="CENTER" textFill="#1f8fe8">
+                                 <font>
+                                    <Font name="System Bold" size="16.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="speed_evolution_textfield" layoutX="150.0" layoutY="273.0" prefHeight="30.0" prefWidth="151.0" />
+                           </children>
+                           <padding>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </padding>
+                        </Pane>
+                        <Button fx:id="evolutions_next_btn" layoutX="1000.0" layoutY="641.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="71.0" style="-fx-background-color: #1f8fe8; -fx-font-weight: 900;" text="Next" textFill="WHITE">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+            <Tab fx:id="final_stage_tab" text="Final Stage">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TextArea fx:id="final_textbox" layoutX="31.0" layoutY="28.0" prefHeight="656.0" prefWidth="785.0" style="-fx-text-fill: #121826; -fx-font-size: 16;" />
+                        <Button fx:id="load_saved_btn" layoutX="922.0" layoutY="501.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="138.0" style="-fx-background-color: #1f8fe8; -fx-font-weight: 900;" text="Load Saved" textFill="WHITE">
+
+                                    </Button>
+                        <Button fx:id="export_file_btn" layoutX="922.0" layoutY="584.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="138.0" style="-fx-background-color: #1f8fe8; -fx-font-weight: 900;" text="Export File" textFill="WHITE">
+
+                                    </Button>
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+      <HBox fx:id="hbox_pane" prefHeight="738.0" prefWidth="1366.0">
+         <children>
+            <Pane prefHeight="738.0" prefWidth="231.0" HBox.hgrow="ALWAYS">
+               <children>
+                  <VBox alignment="TOP_CENTER" layoutX="2.0" layoutY="29.0" prefHeight="368.0" prefWidth="240.0" spacing="20.0">
+                     <children>
+                        <ImageView fitHeight="218.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@Icons/Program_icon/250x135_s.png" />
+                           </image>
+                        </ImageView>
+                        <Button fx:id="createJSONButton" mnemonicParsing="false" prefHeight="39.0" prefWidth="174.0" style="-fx-background-color: white; -fx-border-color: #1f8fe8; -fx-border-width: 2px; -fx-border-radius: 5; -fx-text-fill: #1f8fe8;" text="Create" textAlignment="CENTER" textFill="#1f8fe8">
+                        </Button>
+                        <Button fx:id="openJSONButton" mnemonicParsing="false" prefHeight="39.0" prefWidth="174.0" style="-fx-background-color: #1f8fe8; -fx-font-weight: 900; " text="Open" textFill="WHITE">
+                        </Button>
+                        <Button fx:id="closeJSONButton" disable="true" mnemonicParsing="false" prefHeight="39.0" prefWidth="174.0" style="-fx-background-color: #576c77; -fx-font-weight: 900;" text="Close File" textFill="WHITE" visible="false">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Button>
+                     </children>
+                     <padding>
+                        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                     </padding>
+                  </VBox>
+               </children>
+            </Pane>
+            <Separator orientation="VERTICAL" prefHeight="738.0" prefWidth="0.0" />
+            <Pane fx:id="animation_pane" prefHeight="738.0" prefWidth="1116.0">
+               <children>
+                  <Pane fx:id="hammer_pane" layoutX="340.0" layoutY="185.0" prefHeight="161.0" prefWidth="529.0" rotate="18.8">
+                     <children>
+                        <ImageView fx:id="hammer_image_viewer" fitHeight="190.0" fitWidth="278.0" layoutX="1.0" layoutY="-18.0" pickOnBounds="true" preserveRatio="true" rotate="-35.0">
+                           <image>
+                              <Image url="@Icons/hammer.png" />
+                           </image>
+                           <effect>
+                              <DropShadow blurType="ONE_PASS_BOX" offsetX="5.0" offsetY="10.0" />
+                           </effect>
+                        </ImageView>
+                     </children>
+                  </Pane>
+                  <ImageView fx:id="json_image_viewer" fitHeight="311.0" fitWidth="529.0" layoutX="286.0" layoutY="226.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@Icons/json_png.png" />
+                     </image>
+                     <effect>
+                        <DropShadow blurType="ONE_PASS_BOX" height="11.72" offsetX="9.0" offsetY="5.0" radius="7.5600000000000005" spread="0.23" width="20.52" />
+                     </effect>
+                  </ImageView>
+                  <ImageView fx:id="left_curve" fitHeight="150.0" fitWidth="200.0" layoutX="235.0" layoutY="173.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@Icons/left_curve.png" />
+                     </image>
+                     <effect>
+                        <DropShadow blurType="ONE_PASS_BOX" offsetX="5.0" offsetY="2.0" />
+                     </effect>
+                  </ImageView>
+                  <ImageView fx:id="right_curve" fitHeight="86.0" fitWidth="83.0" layoutX="734.0" layoutY="399.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@Icons/right_curve.png" />
+                     </image>
+                     <viewport>
+                        <Rectangle2D height="300.0" width="300.0" />
+                     </viewport>
+                     <effect>
+                        <DropShadow height="0.0" offsetX="3.0" offsetY="2.0" radius="0.0" spread="0.69" width="0.0" />
+                     </effect>
+                  </ImageView>
+               </children>
+            </Pane>
+         </children>
+      </HBox>
+   </children>
+</Pane>

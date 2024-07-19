@@ -1,0 +1,29 @@
+{
+  "gender": "ALL",
+  "palettes": [
+    {
+      "name": "none",
+      "texture": "pixelmon:pokemon/004_charmander/all/base/none/texture.png",
+      "sprite": "pixelmon:pokemon/004_charmander/all/base/none/sprite.png",
+      "particle": "",
+      "modelLocator": {
+        "factoryType": "NORMAL",
+        "pqc": [
+          "pixelmon:pokemon/004_charmander/all/base/none/model.pqc"
+        ],
+        "yRotation": 22.8
+      },
+      "sounds": [
+        "pixelmon.mob.charmander",
+        "pixelmon.mob.charmander",
+        "pixelmon.mob.charmander"
+      ]
+    },
+    {
+      "name": "shiny",
+      "texture": "pixelmon:pokemon/004_charmander/all/base/shiny/texture.png",
+      "sprite": "pixelmon:pokemon/004_charmander/all/base/shiny/sprite.png",
+      "particle": "arcanery:shiny"
+    }
+  ]
+}

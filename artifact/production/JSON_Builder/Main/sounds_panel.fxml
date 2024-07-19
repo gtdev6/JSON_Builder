@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="659.0" prefWidth="1140.0" xmlns="http://javafx.com/javafx/" xmlns:fx="http://javafx.com/fxml/" fx:controller="Main.sounds_stage">
+   <children>
+      <Label alignment="CENTER" layoutX="478.0" layoutY="47.0" prefHeight="36.0" prefWidth="185.0" text="Sounds" textFill="#1f8fe8">
+         <font>
+            <Font name="Nunito Bold" size="24.0" />
+         </font>
+      </Label>
+      <TextField fx:id="sound_textfield" layoutX="750.0" layoutY="235.0" prefHeight="40.0" prefWidth="329.0" promptText="Enter Sound">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </TextField>
+      <Button fx:id="add_sound_btn" layoutX="832.0" layoutY="320.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="140.0" style="-fx-font-family: Nunito; -fx-background-color: #1f8fe8; -fx-font-weight: 900; -fx-border-radius: 5;" text="Add Sound" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Button>
+      <Button fx:id="save_sounds_btn" layoutX="902.0" layoutY="570.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="195.0" style="-fx-font-family: Nunito; -fx-background-color: #1f8fe8; -fx-font-weight: 900; -fx-border-radius: 5;" text="Save Sounds" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Button>
+      <Button fx:id="remove_sound_btn" layoutX="853.0" layoutY="394.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="98.0" style="-fx-background-color: #FF9D00; -fx-font-weight: 900;" text="Remove" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Button>
+      <ListView fx:id="sound_list" layoutX="58.0" layoutY="178.0" prefHeight="362.0" prefWidth="623.0" />
+   </children>
+</Pane>
